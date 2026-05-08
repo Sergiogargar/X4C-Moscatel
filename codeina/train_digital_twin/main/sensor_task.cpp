@@ -4,6 +4,7 @@
 #include "esp_adc/adc_continuous.h"
 #include "esp_dsp.h"
 #include <string.h>
+#include <float.h>
 
 static const char *TAG = "SENSOR_TASK";
 
@@ -119,9 +120,18 @@ void vSensorTask(void *pvParameters) {
                 }
 
                 // Calcular magnitudes y guardarlas en el buffer
+                float max_magnitude = -FLT_MAX;
+                int   max_bin       = 1;
                 for (int i = 0; i < FFT_RESOLUTION; i++) {
                     pData->fft_spectrum[i] = 10 * log10f((fft_input[i * 2 + 0] * fft_input[i * 2 + 0] + fft_input[i * 2 + 1] * fft_input[i * 2 + 1]) / FFT_SAMPLES);
+                    // Ignorar bin 0 (componente DC) al buscar la frecuencia dominante
+                    if (i > 0 && pData->fft_spectrum[i] > max_magnitude) {
+                        max_magnitude = pData->fft_spectrum[i];
+                        max_bin       = i;
+                    }
                 }
+                // freq_dominante = bin × (Fs / N)
+                pData->telemetry.dominant_freq_hz = (float)max_bin * ((float)SAMPLE_FREQ_HZ / (float)FFT_SAMPLES);
 
                 VibrationMessage_t msg;
                 msg.data_ptr = pData;

@@ -54,9 +54,9 @@ static void parse_nmea(const char* sentence, TelemetryData_t* tel) {
     if (strncmp(sentence, "$GPGGA", 6) == 0) {
         // En una app real, se extraen lat/lon usando strtok o sscanf.
         // Simularemos datos para mantener el ejemplo simple y estable.
-        tel->latitude = 40.4168;   // Madrid, ej.
-        tel->longitude = -3.7038;
-        tel->altitude = 650.0;
+        tel->latitude = 36.6850;   // Jerez de la Frontera (zona del dashboard)
+        tel->longitude = -6.1261;
+        tel->altitude = 55.0;
         tel->gps_valid = true;
     }
 }
