@@ -23,6 +23,7 @@ typedef struct {
     float gyro_y;
     float gyro_z;
     bool gps_valid;
+    float dominant_freq_hz; // Frecuencia de mayor energía en el espectro FFT (Hz)
 } TelemetryData_t;
 
 // Estructura con datos listos para enviar a SD y Red

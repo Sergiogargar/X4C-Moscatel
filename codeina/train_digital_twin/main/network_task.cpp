@@ -9,10 +9,13 @@
 
 static const char *TAG = "NETWORK_TASK";
 
-#define WIFI_SSID "TRAIN_NETWORK"
-#define WIFI_PASS "password123"
-#define MQTT_BROKER_URI "mqtt://192.168.1.100:1883"
-#define MQTT_TOPIC "train/telemetry/vibrations"
+// ─── CONFIGURAR ANTES DE FLASHEAR ────────────────────────────────
+#define WIFI_SSID       "NOMBRE_DE_TU_RED"       // SSID de la red WiFi compartida
+#define WIFI_PASS       "CONTRASEÑA_DE_TU_RED"   // Contraseña WiFi
+#define MQTT_BROKER_URI "mqtt://192.168.1.100:1883" // IP del host donde corre docker-compose
+#define MQTT_TOPIC      "train/telemetry/vibrations"
+#define TRAIN_ID        "T-101"  // Identificador único de esta unidad (T-101, T-102, ...)
+// ─────────────────────────────────────────────────────────────────
 
 static esp_mqtt_client_handle_t client = NULL;
 
@@ -84,31 +87,32 @@ void vNetworkTask(void *pvParameters) {
         if (xQueueReceive(xNetworkQueue, &msg, portMAX_DELAY) == pdTRUE) {
             ProcessedVibrationData_t *data = msg.data_ptr;
 
-            // Formatear JSON
-            cJSON *root = cJSON_CreateObject();
-            cJSON_AddNumberToObject(root, "timestamp", data->telemetry.timestamp_ms);
-            cJSON_AddNumberToObject(root, "lat", data->telemetry.latitude);
-            cJSON_AddNumberToObject(root, "lon", data->telemetry.longitude);
-            cJSON_AddNumberToObject(root, "alt", data->telemetry.altitude);
-            cJSON_AddNumberToObject(root, "accel_z", data->telemetry.accel_z);
+            // Descartar puntos sin fix GPS: coordenadas (0,0) no son útiles en el dashboard
+            if (!data->telemetry.gps_valid) {
+                ESP_LOGW(TAG, "GPS sin fix, descartando publicacion MQTT");
+                xQueueSend(xVibrationDataPool, &data, 0);
+                continue;
+            }
 
-            // Añadir vector FFT (limitamos a 10 picos o un subarray para no saturar MQTT, 
-            // aunque podemos enviar el array entero si el broker lo soporta)
-            // Para el ejemplo, enviamos todo el array
-            cJSON *fft_array = cJSON_CreateFloatArray(data->fft_spectrum, FFT_RESOLUTION);
-            cJSON_AddItemToObject(root, "fft_spectrum", fft_array);
+            // Construir JSON con los campos que espera el dashboard
+            cJSON *root = cJSON_CreateObject();
+            cJSON_AddNumberToObject(root, "timestamp",        (double)data->telemetry.timestamp_ms);
+            cJSON_AddNumberToObject(root, "lat",              data->telemetry.latitude);
+            cJSON_AddNumberToObject(root, "lon",              data->telemetry.longitude);
+            cJSON_AddNumberToObject(root, "alt",              data->telemetry.altitude);
+            cJSON_AddNumberToObject(root, "accel_z",          data->telemetry.accel_z);
+            cJSON_AddNumberToObject(root, "dominant_freq_hz", data->telemetry.dominant_freq_hz);
+            cJSON_AddStringToObject(root, "trainId",          TRAIN_ID);
 
             char *json_string = cJSON_PrintUnformatted(root);
-            
+
             // Publicar en MQTT (QoS 0 para telemetría continua de alta frecuencia)
             esp_mqtt_client_publish(client, MQTT_TOPIC, json_string, 0, 0, 0);
 
-            // Liberar memoria JSON
             free(json_string);
             cJSON_Delete(root);
 
-            // IMPORTANTE: Devolver la memoria del struct de datos al Memory Pool (xVibrationDataPool)
-            // Asumimos que NetworkTask es el último en procesarlo.
+            // Devolver la memoria del struct al pool para reutilización
             xQueueSend(xVibrationDataPool, &data, 0);
         }
     }
