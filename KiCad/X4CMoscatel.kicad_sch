@@ -1513,6 +1513,16 @@
 	)
 	(wire
 		(pts
+			(xy 125.73 88.9) (xy 78.74 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04d2d67d-2925-4305-9dcc-579b6ab63886")
+	)
+	(wire
+		(pts
 			(xy 110.49 93.98) (xy 125.73 93.98)
 		)
 		(stroke
@@ -3065,6 +3075,58 @@
 			(project "X4CMoscatel"
 				(path "/24687d0d-f043-49b3-9437-7388bda4ef16"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 59.69 86.36)
+		(size 19.05 5.08)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9e831027-989a-4c44-9855-a17d9ade85fd")
+		(property "Sheetname" "Piezoeléctrico"
+			(at 59.69 85.6484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "piezoeléctrico.kicad_sch"
+			(at 59.69 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "GPIO5" input
+			(at 78.74 88.9 0)
+			(uuid "b503edee-7458-4a0a-bba4-16541382e9ec")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "X4CMoscatel"
+				(path "/24687d0d-f043-49b3-9437-7388bda4ef16"
+					(page "6")
 				)
 			)
 		)
