@@ -1,0 +1,631 @@
+1778237321: New connection from 172.18.0.4:54060 on port 1883.
+1778237321: New client connected from 172.18.0.4:54060 as Telegraf-Consumer-cWCD3 (p4, c1, k60).
+1779111321: Client Telegraf-Consumer-cWCD3 [172.18.0.4:54060] disconnected: exceeded timeout.
+1779111325: New connection from 172.18.0.4:37452 on port 1883.
+1779111325: New client connected from 172.18.0.4:37452 as Telegraf-Consumer-cWCD3 (p4, c1, k60).
+1779211766: New connection from 172.18.0.1:40764 on port 1883.
+1779211766: New client connected from 172.18.0.1:40764 as ESP32_e2EC4C (p4, c1, k120).
+1779211768: New connection from 172.18.0.3:38774 on port 1883.
+1779211768: New client connected from 172.18.0.3:38774 as Telegraf-Consumer-NiU5Q (p4, c1, k60).
+1779212206: Client Telegraf-Consumer-NiU5Q [172.18.0.3:38774] disconnected.
+1779212211: New connection from 172.18.0.4:47324 on port 1883.
+1779212211: New client connected from 172.18.0.4:47324 as Telegraf-Consumer-XuTpb (p4, c1, k60).
+1779212222: New connection from 172.18.0.1:33608 on port 1883.
+1779212222: New client connected from 172.18.0.1:33608 as ESP32_e2EC4C (p4, c1, k120).
+1779212810: New connection from 172.18.0.1:55872 on port 1883.
+1779212840: Client 172.18.0.1 [172.18.0.1:55872] disconnected: exceeded timeout.
+1779212864: New connection from 172.18.0.1:59070 on port 1883.
+1779212864: Client ESP32_e2EC4C [172.18.0.1:33608] disconnected: session taken over.
+1779212864: New client connected from 172.18.0.1:59070 as ESP32_e2EC4C (p4, c1, k120).
+1779214509: New connection from 172.18.0.1:54074 on port 1883.
+1779214509: Client ESP32_e2EC4C [172.18.0.1:59070] disconnected: session taken over.
+1779214509: New client connected from 172.18.0.1:54074 as ESP32_e2EC4C (p4, c1, k120).
+1779214660: New connection from 172.18.0.1:56420 on port 1883.
+1779214660: Client ESP32_e2EC4C [172.18.0.1:54074] disconnected: session taken over.
+1779214660: New client connected from 172.18.0.1:56420 as ESP32_e2EC4C (p4, c1, k120).
+1779214910: New connection from 172.18.0.1:60174 on port 1883.
+1779214910: Client ESP32_e2EC4C [172.18.0.1:56420] disconnected: session taken over.
+1779214910: New client connected from 172.18.0.1:60174 as ESP32_e2EC4C (p4, c1, k120).
+1779216736: Client ESP32_e2EC4C [172.18.0.1:60174] disconnected: connection closed by client.
+1779448224: New connection from 172.18.0.3:36710 on port 1883.
+1779448224: New client connected from 172.18.0.3:36710 as Telegraf-Consumer-H8zIg (p4, c1, k60).
+1779615862: New connection from 172.18.0.1:35816 on port 1883.
+1779615862: New client connected from 172.18.0.1:35816 as ESP32_e2EC4C (p4, c1, k120).
+1779616059: New connection from 172.18.0.1:42332 on port 1883.
+1779616059: Client ESP32_e2EC4C [172.18.0.1:35816] disconnected: session taken over.
+1779616059: New client connected from 172.18.0.1:42332 as ESP32_e2EC4C (p4, c1, k120).
+1779616144: New connection from 172.18.0.1:47370 on port 1883.
+1779616144: Client ESP32_e2EC4C [172.18.0.1:42332] disconnected: session taken over.
+1779616144: New client connected from 172.18.0.1:47370 as ESP32_e2EC4C (p4, c1, k120).
+1779616501: New connection from 172.18.0.1:36944 on port 1883.
+1779616501: Client ESP32_e2EC4C [172.18.0.1:47370] disconnected: session taken over.
+1779616501: New client connected from 172.18.0.1:36944 as ESP32_e2EC4C (p4, c1, k120).
+1779616507: New connection from 172.18.0.1:35756 on port 1883.
+1779616507: Client ESP32_e2EC4C [172.18.0.1:36944] disconnected: session taken over.
+1779616507: New client connected from 172.18.0.1:35756 as ESP32_e2EC4C (p4, c1, k120).
+1779617612: New connection from 172.18.0.1:48028 on port 1883.
+1779617612: Client ESP32_e2EC4C [172.18.0.1:35756] disconnected: session taken over.
+1779617612: New client connected from 172.18.0.1:48028 as ESP32_e2EC4C (p4, c1, k120).
+1779617808: New connection from 172.18.0.1:47588 on port 1883.
+1779617808: Client ESP32_e2EC4C [172.18.0.1:48028] disconnected: session taken over.
+1779617808: New client connected from 172.18.0.1:47588 as ESP32_e2EC4C (p4, c1, k120).
+1779617971: New connection from 172.18.0.1:57880 on port 1883.
+1779617971: Client ESP32_e2EC4C [172.18.0.1:47588] disconnected: session taken over.
+1779617971: New client connected from 172.18.0.1:57880 as ESP32_e2EC4C (p4, c1, k120).
+1779618554: New connection from 172.18.0.1:56708 on port 1883.
+1779618554: Client ESP32_e2EC4C [172.18.0.1:57880] disconnected: session taken over.
+1779618554: New client connected from 172.18.0.1:56708 as ESP32_e2EC4C (p4, c1, k120).
+1779619346: New connection from 172.18.0.1:41702 on port 1883.
+1779619346: Client ESP32_e2EC4C [172.18.0.1:56708] disconnected: session taken over.
+1779619346: New client connected from 172.18.0.1:41702 as ESP32_e2EC4C (p4, c1, k120).
+1779619657: New connection from 172.18.0.1:47404 on port 1883.
+1779619657: Client ESP32_e2EC4C [172.18.0.1:41702] disconnected: session taken over.
+1779619657: New client connected from 172.18.0.1:47404 as ESP32_e2EC4C (p4, c1, k120).
+1779619724: New connection from 172.18.0.1:47124 on port 1883.
+1779619724: Client ESP32_e2EC4C [172.18.0.1:47404] disconnected: session taken over.
+1779619724: New client connected from 172.18.0.1:47124 as ESP32_e2EC4C (p4, c1, k120).
+1779619747: New connection from 172.18.0.1:58354 on port 1883.
+1779619747: Client ESP32_e2EC4C [172.18.0.1:47124] disconnected: session taken over.
+1779619747: New client connected from 172.18.0.1:58354 as ESP32_e2EC4C (p4, c1, k120).
+1779619780: New connection from 172.18.0.1:46194 on port 1883.
+1779619780: Client ESP32_e2EC4C [172.18.0.1:58354] disconnected: session taken over.
+1779619780: New client connected from 172.18.0.1:46194 as ESP32_e2EC4C (p4, c1, k120).
+1779619840: New connection from 172.18.0.1:55964 on port 1883.
+1779619840: Client ESP32_e2EC4C [172.18.0.1:46194] disconnected: session taken over.
+1779619840: New client connected from 172.18.0.1:55964 as ESP32_e2EC4C (p4, c1, k120).
+1779620070: New connection from 172.18.0.1:59918 on port 1883.
+1779620070: Client ESP32_e2EC4C [172.18.0.1:55964] disconnected: session taken over.
+1779620070: New client connected from 172.18.0.1:59918 as ESP32_e2EC4C (p4, c1, k120).
+1779620075: New connection from 172.18.0.1:38586 on port 1883.
+1779620075: Client ESP32_e2EC4C [172.18.0.1:59918] disconnected: session taken over.
+1779620075: New client connected from 172.18.0.1:38586 as ESP32_e2EC4C (p4, c1, k120).
+1779620097: New connection from 172.18.0.1:54892 on port 1883.
+1779620097: Client ESP32_e2EC4C [172.18.0.1:38586] disconnected: session taken over.
+1779620097: New client connected from 172.18.0.1:54892 as ESP32_e2EC4C (p4, c1, k120).
+1779620113: New connection from 172.18.0.1:44234 on port 1883.
+1779620113: Client ESP32_e2EC4C [172.18.0.1:54892] disconnected: session taken over.
+1779620113: New client connected from 172.18.0.1:44234 as ESP32_e2EC4C (p4, c1, k120).
+1779620123: New connection from 172.18.0.1:33104 on port 1883.
+1779620123: Client ESP32_e2EC4C [172.18.0.1:44234] disconnected: session taken over.
+1779620123: New client connected from 172.18.0.1:33104 as ESP32_e2EC4C (p4, c1, k120).
+1779620131: New connection from 172.18.0.1:58862 on port 1883.
+1779620131: Client ESP32_e2EC4C [172.18.0.1:33104] disconnected: session taken over.
+1779620131: New client connected from 172.18.0.1:58862 as ESP32_e2EC4C (p4, c1, k120).
+1779620220: New connection from 172.18.0.1:44428 on port 1883.
+1779620220: Client ESP32_e2EC4C [172.18.0.1:58862] disconnected: session taken over.
+1779620220: New client connected from 172.18.0.1:44428 as ESP32_e2EC4C (p4, c1, k120).
+1779620383: New connection from 172.18.0.1:39902 on port 1883.
+1779620383: Client ESP32_e2EC4C [172.18.0.1:44428] disconnected: session taken over.
+1779620383: New client connected from 172.18.0.1:39902 as ESP32_e2EC4C (p4, c1, k120).
+1779620620: New connection from 172.18.0.1:36552 on port 1883.
+1779620620: Client ESP32_e2EC4C [172.18.0.1:39902] disconnected: session taken over.
+1779620620: New client connected from 172.18.0.1:36552 as ESP32_e2EC4C (p4, c1, k120).
+1779620822: New connection from 172.18.0.1:48182 on port 1883.
+1779620822: Client ESP32_e2EC4C [172.18.0.1:36552] disconnected: session taken over.
+1779620822: New client connected from 172.18.0.1:48182 as ESP32_e2EC4C (p4, c1, k120).
+1779621059: New connection from 172.18.0.1:51424 on port 1883.
+1779621059: Client ESP32_e2EC4C [172.18.0.1:48182] disconnected: session taken over.
+1779621059: New client connected from 172.18.0.1:51424 as ESP32_e2EC4C (p4, c1, k120).
+1779621262: New connection from 172.18.0.1:37380 on port 1883.
+1779621262: Client ESP32_e2EC4C [172.18.0.1:51424] disconnected: session taken over.
+1779621262: New client connected from 172.18.0.1:37380 as ESP32_e2EC4C (p4, c1, k120).
+1779621563: New connection from 172.18.0.1:38918 on port 1883.
+1779621563: Client ESP32_e2EC4C [172.18.0.1:37380] disconnected: session taken over.
+1779621563: New client connected from 172.18.0.1:38918 as ESP32_e2EC4C (p4, c1, k120).
+1779622404: New connection from 172.18.0.1:48512 on port 1883.
+1779622404: Client ESP32_e2EC4C [172.18.0.1:38918] disconnected: session taken over.
+1779622404: New client connected from 172.18.0.1:48512 as ESP32_e2EC4C (p4, c1, k120).
+1779622618: New connection from 172.18.0.1:39716 on port 1883.
+1779622618: Client ESP32_e2EC4C [172.18.0.1:48512] disconnected: session taken over.
+1779622618: New client connected from 172.18.0.1:39716 as ESP32_e2EC4C (p4, c1, k120).
+1779622630: New connection from 172.18.0.1:57840 on port 1883.
+1779622630: Client ESP32_e2EC4C [172.18.0.1:39716] disconnected: session taken over.
+1779622630: New client connected from 172.18.0.1:57840 as ESP32_e2EC4C (p4, c1, k120).
+1779622722: New connection from 172.18.0.1:38984 on port 1883.
+1779622722: Client ESP32_e2EC4C [172.18.0.1:57840] disconnected: session taken over.
+1779622722: New client connected from 172.18.0.1:38984 as ESP32_e2EC4C (p4, c1, k120).
+1779622746: New connection from 172.18.0.1:49846 on port 1883.
+1779622746: Client ESP32_e2EC4C [172.18.0.1:38984] disconnected: session taken over.
+1779622746: New client connected from 172.18.0.1:49846 as ESP32_e2EC4C (p4, c1, k120).
+1779622808: New connection from 172.18.0.1:34744 on port 1883.
+1779622808: Client ESP32_e2EC4C [172.18.0.1:49846] disconnected: session taken over.
+1779622808: New client connected from 172.18.0.1:34744 as ESP32_e2EC4C (p4, c1, k120).
+1779622843: New connection from 172.18.0.1:35538 on port 1883.
+1779622843: Client ESP32_e2EC4C [172.18.0.1:34744] disconnected: session taken over.
+1779622843: New client connected from 172.18.0.1:35538 as ESP32_e2EC4C (p4, c1, k120).
+1779622879: New connection from 172.18.0.1:59536 on port 1883.
+1779622879: Client ESP32_e2EC4C [172.18.0.1:35538] disconnected: session taken over.
+1779622879: New client connected from 172.18.0.1:59536 as ESP32_e2EC4C (p4, c1, k120).
+1779622919: New connection from 172.18.0.1:46188 on port 1883.
+1779622919: Client ESP32_e2EC4C [172.18.0.1:59536] disconnected: session taken over.
+1779622919: New client connected from 172.18.0.1:46188 as ESP32_e2EC4C (p4, c1, k120).
+1779622932: New connection from 172.18.0.1:54276 on port 1883.
+1779622932: Client ESP32_e2EC4C [172.18.0.1:46188] disconnected: session taken over.
+1779622932: New client connected from 172.18.0.1:54276 as ESP32_e2EC4C (p4, c1, k120).
+1779623119: New connection from 172.18.0.1:55600 on port 1883.
+1779623119: Client ESP32_e2EC4C [172.18.0.1:54276] disconnected: session taken over.
+1779623119: New client connected from 172.18.0.1:55600 as ESP32_e2EC4C (p4, c1, k120).
+1779623275: New connection from 172.18.0.1:34354 on port 1883.
+1779623275: Client ESP32_e2EC4C [172.18.0.1:55600] disconnected: session taken over.
+1779623275: New client connected from 172.18.0.1:34354 as ESP32_e2EC4C (p4, c1, k120).
+1779634116: Client ESP32_e2EC4C [172.18.0.1:34354] disconnected: connection closed by client.
+1779634119: New connection from 172.18.0.1:59976 on port 1883.
+1779634119: New connection from 172.18.0.1:59978 on port 1883.
+1779634119: New connection from 172.18.0.1:59998 on port 1883.
+1779634119: New connection from 172.18.0.1:59980 on port 1883.
+1779634119: New connection from 172.18.0.1:60014 on port 1883.
+1779634119: New connection from 172.18.0.1:60020 on port 1883.
+1779634119: New connection from 172.18.0.1:60038 on port 1883.
+1779634119: New connection from 172.18.0.1:60052 on port 1883.
+1779634119: New connection from 172.18.0.1:60026 on port 1883.
+1779634119: New connection from 172.18.0.1:60064 on port 1883.
+1779634119: New connection from 172.18.0.1:60068 on port 1883.
+1779634119: New connection from 172.18.0.1:60084 on port 1883.
+1779634119: New connection from 172.18.0.1:60088 on port 1883.
+1779634119: New connection from 172.18.0.1:60098 on port 1883.
+1779634119: New connection from 172.18.0.1:60100 on port 1883.
+1779634119: New connection from 172.18.0.1:60104 on port 1883.
+1779634119: New connection from 172.18.0.1:60118 on port 1883.
+1779634119: New connection from 172.18.0.1:60132 on port 1883.
+1779634119: New connection from 172.18.0.1:60142 on port 1883.
+1779634119: New connection from 172.18.0.1:60148 on port 1883.
+1779634119: New connection from 172.18.0.1:60152 on port 1883.
+1779634119: New connection from 172.18.0.1:60158 on port 1883.
+1779634119: New connection from 172.18.0.1:60172 on port 1883.
+1779634119: New connection from 172.18.0.1:60180 on port 1883.
+1779634119: New connection from 172.18.0.1:60194 on port 1883.
+1779634119: New connection from 172.18.0.1:60206 on port 1883.
+1779634119: New connection from 172.18.0.1:60208 on port 1883.
+1779634119: New connection from 172.18.0.1:60210 on port 1883.
+1779634119: New connection from 172.18.0.1:60226 on port 1883.
+1779634119: New connection from 172.18.0.1:60230 on port 1883.
+1779634119: New connection from 172.18.0.1:60260 on port 1883.
+1779634119: New connection from 172.18.0.1:60272 on port 1883.
+1779634119: New connection from 172.18.0.1:60288 on port 1883.
+1779634119: New connection from 172.18.0.1:60296 on port 1883.
+1779634119: New connection from 172.18.0.1:60304 on port 1883.
+1779634119: New connection from 172.18.0.1:60320 on port 1883.
+1779634119: New connection from 172.18.0.1:60324 on port 1883.
+1779634119: New connection from 172.18.0.1:60336 on port 1883.
+1779634119: New connection from 172.18.0.1:60348 on port 1883.
+1779634119: New connection from 172.18.0.1:60356 on port 1883.
+1779634119: New connection from 172.18.0.1:60246 on port 1883.
+1779634119: New connection from 172.18.0.1:60368 on port 1883.
+1779634119: New connection from 172.18.0.1:60378 on port 1883.
+1779634119: New connection from 172.18.0.1:60392 on port 1883.
+1779634119: New connection from 172.18.0.1:60402 on port 1883.
+1779634119: New connection from 172.18.0.1:60416 on port 1883.
+1779634119: New connection from 172.18.0.1:60430 on port 1883.
+1779634119: New connection from 172.18.0.1:60440 on port 1883.
+1779634119: New connection from 172.18.0.1:60456 on port 1883.
+1779634119: New connection from 172.18.0.1:60466 on port 1883.
+1779634119: New connection from 172.18.0.1:60468 on port 1883.
+1779634119: New connection from 172.18.0.1:60470 on port 1883.
+1779634119: New connection from 172.18.0.1:60484 on port 1883.
+1779634119: New connection from 172.18.0.1:60504 on port 1883.
+1779634119: New connection from 172.18.0.1:60508 on port 1883.
+1779634119: New connection from 172.18.0.1:60516 on port 1883.
+1779634119: New connection from 172.18.0.1:60522 on port 1883.
+1779634119: New connection from 172.18.0.1:60370 on port 1883.
+1779634119: New connection from 172.18.0.1:60488 on port 1883.
+1779634119: New connection from 172.18.0.1:60548 on port 1883.
+1779634119: New connection from 172.18.0.1:60550 on port 1883.
+1779634119: New connection from 172.18.0.1:60566 on port 1883.
+1779634119: New connection from 172.18.0.1:60564 on port 1883.
+1779634119: New connection from 172.18.0.1:60582 on port 1883.
+1779634119: New connection from 172.18.0.1:60596 on port 1883.
+1779634119: New connection from 172.18.0.1:60598 on port 1883.
+1779634119: New connection from 172.18.0.1:60604 on port 1883.
+1779634119: New connection from 172.18.0.1:60606 on port 1883.
+1779634119: New connection from 172.18.0.1:60618 on port 1883.
+1779634119: New connection from 172.18.0.1:60626 on port 1883.
+1779634119: New connection from 172.18.0.1:60640 on port 1883.
+1779634119: New connection from 172.18.0.1:60534 on port 1883.
+1779634119: New connection from 172.18.0.1:60650 on port 1883.
+1779634119: New connection from 172.18.0.1:60660 on port 1883.
+1779634119: New connection from 172.18.0.1:60674 on port 1883.
+1779634119: New connection from 172.18.0.1:60680 on port 1883.
+1779634119: New connection from 172.18.0.1:60688 on port 1883.
+1779634119: New connection from 172.18.0.1:60704 on port 1883.
+1779634119: New connection from 172.18.0.1:60714 on port 1883.
+1779634119: New connection from 172.18.0.1:60718 on port 1883.
+1779634119: New connection from 172.18.0.1:60726 on port 1883.
+1779634119: New connection from 172.18.0.1:60730 on port 1883.
+1779634119: New connection from 172.18.0.1:60738 on port 1883.
+1779634119: New connection from 172.18.0.1:60728 on port 1883.
+1779634119: New connection from 172.18.0.1:60740 on port 1883.
+1779634119: New connection from 172.18.0.1:60746 on port 1883.
+1779634119: New connection from 172.18.0.1:60762 on port 1883.
+1779634119: New connection from 172.18.0.1:60772 on port 1883.
+1779634119: New connection from 172.18.0.1:60788 on port 1883.
+1779634119: New connection from 172.18.0.1:60800 on port 1883.
+1779634119: New connection from 172.18.0.1:60802 on port 1883.
+1779634119: New connection from 172.18.0.1:60814 on port 1883.
+1779634119: New connection from 172.18.0.1:60828 on port 1883.
+1779634119: New connection from 172.18.0.1:60836 on port 1883.
+1779634119: New connection from 172.18.0.1:60742 on port 1883.
+1779634119: New connection from 172.18.0.1:60870 on port 1883.
+1779634119: New connection from 172.18.0.1:60880 on port 1883.
+1779634119: New connection from 172.18.0.1:60894 on port 1883.
+1779634119: New connection from 172.18.0.1:60910 on port 1883.
+1779634119: New connection from 172.18.0.1:60928 on port 1883.
+1779634119: New connection from 172.18.0.1:60940 on port 1883.
+1779634119: New connection from 172.18.0.1:60840 on port 1883.
+1779634119: New connection from 172.18.0.1:60912 on port 1883.
+1779634119: New connection from 172.18.0.1:60950 on port 1883.
+1779634119: New connection from 172.18.0.1:32768 on port 1883.
+1779634119: New connection from 172.18.0.1:60744 on port 1883.
+1779634119: New connection from 172.18.0.1:32966 on port 1883.
+1779634119: New connection from 172.18.0.1:33032 on port 1883.
+1779634119: New connection from 172.18.0.1:33068 on port 1883.
+1779634119: New connection from 172.18.0.1:33078 on port 1883.
+1779634119: New connection from 172.18.0.1:33058 on port 1883.
+1779634293: New client connected from 172.18.0.1:59976 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:59976] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:59978 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:59978] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:59998 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:59998] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:59980 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:59980] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60014 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60014] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60020 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60020] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60038 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60038] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60052 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60052] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60026 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60026] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60064 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60064] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60068 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60068] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60084 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60084] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60088 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60088] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60098 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60098] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60100 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60100] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60104 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60104] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60118 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60118] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60132 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60132] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60142 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60142] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60148 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60148] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60152 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60152] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60158 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60158] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60172 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60172] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60180 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60180] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60194 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60194] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60206 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60206] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60208 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60208] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60210 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60210] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60226 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60226] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60230 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60230] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60260 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60260] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60272 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60272] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60288 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60288] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60296 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60296] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60304 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60304] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60320 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60320] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60324 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60324] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60336 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60336] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60348 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60348] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60356 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60356] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60246 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60246] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60368 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60368] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60378 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60378] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60392 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60392] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60402 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60402] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60416 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60416] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60430 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60430] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60440 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60440] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60456 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60456] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60466 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60466] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60468 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60468] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60470 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60470] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60484 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60484] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60504 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60504] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60508 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60508] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60516 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60516] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60522 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60522] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60370 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60370] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60488 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60488] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60548 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60548] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60550 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60550] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60566 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60566] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60564 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60564] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60582 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60582] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60596 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60596] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60598 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60598] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60604 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60604] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60606 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60606] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60618 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60618] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60626 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60626] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60640 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60640] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60534 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60534] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60650 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60650] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60660 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60660] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60674 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60674] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60680 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60680] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60688 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60688] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60704 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60704] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60714 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60714] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60718 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60718] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60726 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60726] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60730 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60730] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60738 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60738] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60728 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60728] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60740 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60740] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60746 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60746] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60762 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60762] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60772 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60772] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60788 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60788] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60800 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60800] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60802 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60802] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60814 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60814] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60828 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60828] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60836 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60836] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60742 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60742] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60870 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60870] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60880 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60880] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60894 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60894] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60910 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60910] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60928 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60928] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60940 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60940] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60840 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60840] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60912 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60912] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60950 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60950] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:32768 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:32768] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:60744 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:60744] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:32966 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:32966] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:33032 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:33032] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:33068 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:33068] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:33078 as ESP32_e2EC4C (p4, c1, k120).
+1779634293: Client ESP32_e2EC4C [172.18.0.1:33078] disconnected: session taken over.
+1779634293: New client connected from 172.18.0.1:33058 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33058] disconnected: connection closed by client.
+1779634294: New connection from 172.18.0.1:60988 on port 1883.
+1779634294: New connection from 172.18.0.1:60978 on port 1883.
+1779634294: New connection from 172.18.0.1:60976 on port 1883.
+1779634294: New connection from 172.18.0.1:60962 on port 1883.
+1779634294: New connection from 172.18.0.1:32926 on port 1883.
+1779634294: New connection from 172.18.0.1:32920 on port 1883.
+1779634294: New connection from 172.18.0.1:32912 on port 1883.
+1779634294: New connection from 172.18.0.1:32898 on port 1883.
+1779634294: New connection from 172.18.0.1:32888 on port 1883.
+1779634294: New connection from 172.18.0.1:32872 on port 1883.
+1779634294: New connection from 172.18.0.1:32856 on port 1883.
+1779634294: New connection from 172.18.0.1:32848 on port 1883.
+1779634294: New connection from 172.18.0.1:32836 on port 1883.
+1779634294: New connection from 172.18.0.1:32826 on port 1883.
+1779634294: New connection from 172.18.0.1:32814 on port 1883.
+1779634294: New connection from 172.18.0.1:32808 on port 1883.
+1779634294: New connection from 172.18.0.1:32802 on port 1883.
+1779634294: New connection from 172.18.0.1:32786 on port 1883.
+1779634294: New connection from 172.18.0.1:32942 on port 1883.
+1779634294: New connection from 172.18.0.1:32934 on port 1883.
+1779634294: New connection from 172.18.0.1:32770 on port 1883.
+1779634294: New connection from 172.18.0.1:32980 on port 1883.
+1779634294: New connection from 172.18.0.1:32970 on port 1883.
+1779634294: New connection from 172.18.0.1:32968 on port 1883.
+1779634294: New connection from 172.18.0.1:33028 on port 1883.
+1779634294: New connection from 172.18.0.1:33024 on port 1883.
+1779634294: New connection from 172.18.0.1:33020 on port 1883.
+1779634294: New connection from 172.18.0.1:33008 on port 1883.
+1779634294: New connection from 172.18.0.1:32992 on port 1883.
+1779634294: New connection from 172.18.0.1:32982 on port 1883.
+1779634294: New connection from 172.18.0.1:33186 on port 1883.
+1779634294: New connection from 172.18.0.1:33184 on port 1883.
+1779634294: New connection from 172.18.0.1:33146 on port 1883.
+1779634294: New connection from 172.18.0.1:33130 on port 1883.
+1779634294: New connection from 172.18.0.1:33116 on port 1883.
+1779634294: New connection from 172.18.0.1:33114 on port 1883.
+1779634294: New connection from 172.18.0.1:33102 on port 1883.
+1779634294: New connection from 172.18.0.1:33088 on port 1883.
+1779634294: New connection from 172.18.0.1:33220 on port 1883.
+1779634294: New connection from 172.18.0.1:33208 on port 1883.
+1779634294: New connection from 172.18.0.1:33198 on port 1883.
+1779634294: New connection from 172.18.0.1:33178 on port 1883.
+1779634294: New connection from 172.18.0.1:33172 on port 1883.
+1779634294: New connection from 172.18.0.1:33168 on port 1883.
+1779634294: New connection from 172.18.0.1:33038 on port 1883.
+1779634294: New connection from 172.18.0.1:33048 on port 1883.
+1779634294: New connection from 172.18.0.1:33160 on port 1883.
+1779634294: New connection from 172.18.0.1:33164 on port 1883.
+1779634294: New client connected from 172.18.0.1:60988 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:60988] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:60978 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:60978] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:60976 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:60976] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:60962 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:60962] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32926 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32926] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32920 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32920] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32912 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32912] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32898 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32898] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32888 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32888] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32872 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32872] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32856 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32856] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32848 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32848] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32836 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32836] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32826 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32826] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32814 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32814] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32808 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32808] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32802 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32802] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32786 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32786] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32942 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32942] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32934 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32934] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32770 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32770] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32980 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32980] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32970 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32970] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32968 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32968] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33028 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33028] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33024 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33024] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33020 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33020] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33008 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33008] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32992 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32992] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:32982 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:32982] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33186 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33186] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33184 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33184] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33146 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33146] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33130 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33130] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33116 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33116] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33114 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33114] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33102 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33102] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33088 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33088] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33220 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33220] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33208 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33208] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33198 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33198] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33178 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33178] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33172 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33172] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33168 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33168] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33038 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33038] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33048 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33048] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33160 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33160] disconnected: session taken over.
+1779634294: New client connected from 172.18.0.1:33164 as ESP32_e2EC4C (p4, c1, k120).
+1779634294: Client ESP32_e2EC4C [172.18.0.1:33164] disconnected: connection closed by client.
+1779634307: New connection from 172.18.0.1:49468 on port 1883.
+1779634307: New client connected from 172.18.0.1:49468 as ESP32_e2EC4C (p4, c1, k120).
+1779634470: Client ESP32_e2EC4C [172.18.0.1:49468] disconnected: connection closed by client.

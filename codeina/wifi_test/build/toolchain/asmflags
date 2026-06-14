@@ -1,0 +1,5 @@
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+"-specs=C:/Users/sergi/Desktop/X4C Moscatel/codeina/wifi_test/build/specs/picolibc.specs"

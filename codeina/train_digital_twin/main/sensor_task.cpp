@@ -1,149 +1,225 @@
+#define CONFIG_I2C_SUPPRESS_DEPRECATE_WARN 1
 #include "sensor_task.h"
 #include "data_types.h"
 #include "esp_log.h"
-#include "esp_adc/adc_continuous.h"
 #include "esp_dsp.h"
+#include "driver/i2c.h"
+#include "driver/gptimer.h"
 #include <string.h>
 #include <float.h>
+#include <math.h>
 
 static const char *TAG = "SENSOR_TASK";
 
-#define ADC_UNIT ADC_UNIT_1
-#define ADC_CHANNEL ADC_CHANNEL_0
-#define SAMPLE_FREQ_HZ 10000 // 10kHz de muestreo
-#define READ_LEN 1024        // Tamaño del buffer de DMA (en bytes)
+#define SAMPLE_FREQ_HZ 1000 // 1 kHz para el ICM-20948
 #define NUM_SAMPLES_PER_FFT FFT_SAMPLES
 
-// Arrays para la FFT
-// La librería dsps_fft2r_fc32 necesita arreglos complejos donde par es real, impar es imaginario.
+#define I2C_MASTER_NUM I2C_NUM_0
+#define I2C_MASTER_SDA_IO 8
+#define I2C_MASTER_SCL_IO 9
+
+static uint8_t s_mpu6050_addr = 0x68;
+
+// === REGISTROS MPU6050 ===
+#define MPU6050_ACCEL_XOUT_H 0x3B
+
 static float fft_input[FFT_SAMPLES * 2];
 static float fft_window[FFT_SAMPLES];
 
-// Double buffer para DMA: adc_continuous provee callbacks que usaremos para mover los datos al procesador.
-// En este caso, usaremos xStreamBuffer o lecturas directas bloqueantes controladas por vTaskDelay.
-// Para máxima eficiencia sin delay, usaremos el API continuo de ESP-IDF.
+static esp_err_t mpu6050_write_reg(uint8_t reg, uint8_t data) {
+    uint8_t write_buf[2] = {reg, data};
+    esp_err_t err = i2c_master_write_to_device(I2C_MASTER_NUM, s_mpu6050_addr, write_buf, sizeof(write_buf), pdMS_TO_TICKS(100));
+    if (err != ESP_OK) {
+        ESP_LOGE(TAG, "Error escribiendo 0x%02X en registro 0x%02X (I2C error %d)", data, reg, err);
+    }
+    return err;
+}
 
-static bool IRAM_ATTR adc_conv_done_cb(adc_continuous_handle_t handle, const adc_continuous_evt_data_t *edata, void *user_data) {
-    BaseType_t mustYield = pdFALSE;
-    TaskHandle_t task = (TaskHandle_t)user_data;
-    vTaskNotifyGiveFromISR(task, &mustYield);
-    return (mustYield == pdTRUE);
+static esp_err_t mpu6050_read_reg(uint8_t reg, uint8_t *data, size_t len) {
+    esp_err_t err = i2c_master_write_read_device(I2C_MASTER_NUM, s_mpu6050_addr, &reg, 1, data, len, pdMS_TO_TICKS(100));
+    if (err != ESP_OK) {
+        static int fail_count = 0;
+        if (fail_count++ % 1000 == 0) ESP_LOGE(TAG, "Error leyendo registro 0x%02X (I2C error %d)", reg, err);
+    }
+    return err;
+}
+
+static void init_imu_i2c() {
+    i2c_config_t conf;
+    memset(&conf, 0, sizeof(conf));
+    conf.mode = I2C_MODE_MASTER;
+    conf.sda_io_num = (gpio_num_t)I2C_MASTER_SDA_IO;
+    conf.scl_io_num = (gpio_num_t)I2C_MASTER_SCL_IO;
+    conf.sda_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.scl_pullup_en = GPIO_PULLUP_ENABLE;
+    conf.master.clk_speed = 400000;
+    i2c_param_config(I2C_MASTER_NUM, &conf);
+    i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
+
+    ESP_LOGI(TAG, "Iniciando secuencia de rescate para clon MPU6050...");
+
+    mpu6050_write_reg(0x68, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(20));
+
+    mpu6050_write_reg(0x6A, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(20));
+
+    // Usar reloj PLL X-Axis (0x01) en lugar de oscilador interno, por si el interno está muerto
+    mpu6050_write_reg(0x6B, 0x01);
+    vTaskDelay(pdMS_TO_TICKS(50));
+
+    mpu6050_write_reg(0x6C, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(20));
+
+    uint8_t who = 0;
+    mpu6050_read_reg(0x75, &who, 1);
+    ESP_LOGI(TAG, "Clon MPU6050 Inicializado. WHO_AM_I = 0x%02X", who);
+}
+
+static bool IRAM_ATTR timer_isr_handler(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_ctx) {
+    TaskHandle_t task = (TaskHandle_t)user_ctx;
+    BaseType_t high_task_wakeup = pdFALSE;
+    vTaskNotifyGiveFromISR(task, &high_task_wakeup);
+    return high_task_wakeup == pdTRUE;
 }
 
 void vSensorTask(void *pvParameters) {
-    ESP_LOGI(TAG, "Inicializando Sensor Task en Core %d", xPortGetCoreID());
+    ESP_LOGI(TAG, "Inicializando Sensor Task en Core 1");
 
-    // 1. Inicializar ESP-DSP
+    init_imu_i2c();
+
+    gptimer_handle_t gptimer = NULL;
+    gptimer_config_t timer_config = {};
+    timer_config.clk_src = GPTIMER_CLK_SRC_DEFAULT;
+    timer_config.direction = GPTIMER_COUNT_UP;
+    timer_config.resolution_hz = 1000000; // 1MHz
+    timer_config.intr_priority = 0;
+    timer_config.flags.intr_shared = 0;
+    gptimer_new_timer(&timer_config, &gptimer);
+
+    gptimer_alarm_config_t alarm_config = {};
+    alarm_config.alarm_count = 1000; // 1000us = 1ms = 1kHz
+    alarm_config.reload_count = 0;
+    alarm_config.flags.auto_reload_on_alarm = true;
+    gptimer_set_alarm_action(gptimer, &alarm_config);
+
+    gptimer_event_callbacks_t cbs = {};
+    cbs.on_alarm = timer_isr_handler;
+    gptimer_register_event_callbacks(gptimer, &cbs, (void*) xTaskGetCurrentTaskHandle());
+
     esp_err_t ret = dsps_fft2r_init_fc32(NULL, CONFIG_DSP_MAX_FFT_SIZE);
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "No se pudo inicializar ESP-DSP");
         vTaskDelete(NULL);
     }
-    // Generar ventana Hann
-    dsps_wind_hann_f32(fft_window, FFT_SAMPLES);
-
-    // 2. Configurar ADC Continuo (DMA)
-    adc_continuous_handle_t adc_handle;
-    adc_continuous_handle_cfg_t adc_config = {
-        .max_store_buf_size = READ_LEN * 4,
-        .conv_frame_size = READ_LEN,
-    };
-    ESP_ERROR_CHECK(adc_continuous_new_handle(&adc_config, &adc_handle));
-
-    adc_continuous_config_t dig_cfg = {
-        .sample_freq_hz = SAMPLE_FREQ_HZ,
-        .conv_mode = ADC_CONV_SINGLE_UNIT_1,
-        .format = ADC_DIGI_OUTPUT_FORMAT_TYPE1,
-    };
     
-    adc_digi_pattern_config_t adc_pattern[1] = {
-        {
-            .atten = ADC_ATTEN_DB_12,
-            .channel = ADC_CHANNEL & 0x7,
-            .unit = ADC_UNIT,
-            .bit_width = SOC_ADC_DIGI_MAX_BITWIDTH,
-        }
-    };
-    dig_cfg.pattern_num = 1;
-    dig_cfg.adc_pattern = adc_pattern;
-    ESP_ERROR_CHECK(adc_continuous_config(adc_handle, &dig_cfg));
+    dsps_wind_hann_f32(fft_window, FFT_SAMPLES);
+    
+    gptimer_enable(gptimer);
+    gptimer_start(gptimer);
 
-    adc_continuous_evt_cbs_t cbs = {
-        .on_conv_done = adc_conv_done_cb,
-    };
-    ESP_ERROR_CHECK(adc_continuous_register_event_callbacks(adc_handle, &cbs, xTaskGetCurrentTaskHandle()));
-
-    ESP_ERROR_CHECK(adc_continuous_start(adc_handle));
-
-    uint8_t rx_buffer[READ_LEN];
-    uint32_t ret_num = 0;
     int samples_collected = 0;
+    int print_temp_counter = 0;
 
     while (1) {
-        // Esperamos a que el DMA nos notifique que hay datos (sin blockear innecesariamente CPU, cero delay())
-        ulTaskNotifyTake(pdTRUE, portMAX_DELAY);
+        ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(10));
 
-        while (adc_continuous_read(adc_handle, rx_buffer, READ_LEN, &ret_num, 0) == ESP_OK) {
-            // Extraer las muestras
-            for (int i = 0; i < ret_num; i += SOC_ADC_DIGI_RESULT_BYTES) {
-                adc_digi_output_data_t *p = (adc_digi_output_data_t*)&rx_buffer[i];
-                if (p->type1.channel == ADC_CHANNEL) {
-                    if (samples_collected < FFT_SAMPLES) {
-                        fft_input[samples_collected * 2 + 0] = (float)p->type1.data; // Parte Real
-                        fft_input[samples_collected * 2 + 1] = 0;                    // Parte Imaginaria
-                        samples_collected++;
-                    }
-                }
+        uint8_t sensor_data[14];
+        if (mpu6050_read_reg(MPU6050_ACCEL_XOUT_H, sensor_data, 14) == ESP_OK) {
+            
+            int16_t raw_ax = (sensor_data[0] << 8) | sensor_data[1];
+            int16_t raw_ay = (sensor_data[2] << 8) | sensor_data[3];
+            int16_t raw_az = (sensor_data[4] << 8) | sensor_data[5];
+            
+            int16_t raw_temp = (sensor_data[6] << 8) | sensor_data[7];
+
+            int16_t raw_gx = (sensor_data[8] << 8) | sensor_data[9];
+            int16_t raw_gy = (sensor_data[10] << 8) | sensor_data[11];
+            int16_t raw_gz = (sensor_data[12] << 8) | sensor_data[13];
+
+            if (print_temp_counter++ % 1000 == 0) {
+                ESP_LOGW(TAG, "Hardware Test -> Temp Cruda: %d | Accel Z Crudo: %d", raw_temp, raw_az);
+            }
+
+            float ax = ((float)raw_ax / 16384.0f) * 9.81f;
+            float ay = ((float)raw_ay / 16384.0f) * 9.81f;
+            float az = ((float)raw_az / 16384.0f) * 9.81f;
+
+            if (xSemaphoreTake(xTelemetryMutex, 0) == pdTRUE) {
+                currentTelemetry.accel_x = ax;
+                currentTelemetry.accel_y = ay;
+                currentTelemetry.accel_z = az;
+                currentTelemetry.gyro_x = (float)raw_gx / 131.0f;
+                currentTelemetry.gyro_y = (float)raw_gy / 131.0f;
+                currentTelemetry.gyro_z = (float)raw_gz / 131.0f;
+                xSemaphoreGive(xTelemetryMutex);
+            }
+
+            if (samples_collected < FFT_SAMPLES) {
+                fft_input[samples_collected * 2 + 0] = az; // Analizar vibración Z (eje vertical)
+                fft_input[samples_collected * 2 + 1] = 0;
+                samples_collected++;
             }
         }
 
-        // Si tenemos suficientes muestras, calculamos FFT
         if (samples_collected >= FFT_SAMPLES) {
-            samples_collected = 0; // Reiniciar para el siguiente frame
+            samples_collected = 0;
 
-            // Aplicar ventana
+            // 1. Eliminar el Offset DC (La gravedad constante)
+            float sum = 0.0f;
             for (int i = 0; i < FFT_SAMPLES; i++) {
+                sum += fft_input[i * 2 + 0];
+            }
+            float mean = sum / FFT_SAMPLES;
+
+            // 2. Restar la media y aplicar ventana de Hann
+            for (int i = 0; i < FFT_SAMPLES; i++) {
+                fft_input[i * 2 + 0] -= mean;
                 fft_input[i * 2 + 0] *= fft_window[i];
             }
 
-            // FFT
             dsps_fft2r_fc32(fft_input, FFT_SAMPLES);
             dsps_bit_rev_fc32(fft_input, FFT_SAMPLES);
 
-            // Obtener memoria del pool para enviar el resultado sin bloquear ni perder datos
             ProcessedVibrationData_t* pData = NULL;
             if (xQueueReceive(xVibrationDataPool, &pData, 0) == pdTRUE) {
-                // Copiar la telemetría actual (Sincronizado)
                 if (xSemaphoreTake(xTelemetryMutex, pdMS_TO_TICKS(10)) == pdTRUE) {
                     pData->telemetry = currentTelemetry;
                     xSemaphoreGive(xTelemetryMutex);
                 }
 
-                // Calcular magnitudes y guardarlas en el buffer
                 float max_magnitude = -FLT_MAX;
                 int   max_bin       = 1;
-                for (int i = 0; i < FFT_RESOLUTION; i++) {
-                    pData->fft_spectrum[i] = 10 * log10f((fft_input[i * 2 + 0] * fft_input[i * 2 + 0] + fft_input[i * 2 + 1] * fft_input[i * 2 + 1]) / FFT_SAMPLES);
-                    // Ignorar bin 0 (componente DC) al buscar la frecuencia dominante
-                    if (i > 0 && pData->fft_spectrum[i] > max_magnitude) {
+                // Empezamos en i=1 porque el bin 0 es DC (que ya debería ser cero por restar la media)
+                for (int i = 1; i < FFT_RESOLUTION; i++) {
+                    float energy = (fft_input[i * 2 + 0] * fft_input[i * 2 + 0] + fft_input[i * 2 + 1] * fft_input[i * 2 + 1]) / FFT_SAMPLES;
+                    if (energy < 1e-10f) energy = 1e-10f; // Evitar log10(0) que da -infinito
+                    pData->fft_spectrum[i] = 10 * log10f(energy);
+                    
+                    if (pData->fft_spectrum[i] > max_magnitude) {
                         max_magnitude = pData->fft_spectrum[i];
                         max_bin       = i;
                     }
                 }
-                // freq_dominante = bin × (Fs / N)
+                
                 pData->telemetry.dominant_freq_hz = (float)max_bin * ((float)SAMPLE_FREQ_HZ / (float)FFT_SAMPLES);
+                pData->telemetry.vibration_amplitude = max_magnitude;
+                
+                // Actualizar la estructura global para que MAIN_DEP la imprima correctamente
+                if (xSemaphoreTake(xTelemetryMutex, pdMS_TO_TICKS(10)) == pdTRUE) {
+                    currentTelemetry.dominant_freq_hz = pData->telemetry.dominant_freq_hz;
+                    currentTelemetry.vibration_amplitude = pData->telemetry.vibration_amplitude;
+                    xSemaphoreGive(xTelemetryMutex);
+                }
+
+                ESP_LOGI(TAG, "Dato Crudo Z: %.2f m/s2 | Freq Dominante: %.2f Hz | Amplitud: %.2f dB", 
+                         currentTelemetry.accel_z, pData->telemetry.dominant_freq_hz, pData->telemetry.vibration_amplitude);
 
                 VibrationMessage_t msg;
                 msg.data_ptr = pData;
 
-                // Enviar a SD Task
-                if (xQueueSend(xSdQueue, &msg, 0) != pdTRUE) {
-                    // Si falla, al menos no perdemos la memoria, intentamos enviar a Network
-                }
-                // Enviar a Network Task (usamos otro mensaje, misma referencia, Network o SD deberán liberar al final,
-                // O implementar reference counting. Para este ejemplo, haremos que la Network task libere (devuelva al pool))
+                if (xQueueSend(xSdQueue, &msg, 0) != pdTRUE) {}
                 if (xQueueSend(xNetworkQueue, &msg, 0) != pdTRUE) {
-                    // Si Network falla también, devolvemos al pool para no perder memoria
                     xQueueSend(xVibrationDataPool, &pData, 0);
                 }
             } else {

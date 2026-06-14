@@ -1,0 +1,5 @@
+"-specs=C:/Users/sergi/Desktop/X4C Moscatel/codeina/train_digital_twin/build/bootloader/specs/picolibc.specs"
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero

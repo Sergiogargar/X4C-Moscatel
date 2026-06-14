@@ -40,6 +40,11 @@
     "selected-count_one": "{{count}} selected",
     "selected-count_other": "{{count}} selected"
   },
+  "chunk-load-recovery": {
+    "auto-message": "A newer version of Metrics Drilldown is available — reloading…",
+    "manual-message": "A newer version of Metrics Drilldown is available but could not be loaded automatically.",
+    "reload-button": "Reload now"
+  },
   "configure-panel": {
     "apply": "Apply",
     "cancel": "Cancel",
@@ -66,6 +71,10 @@
     "message": "Please <2>try reloading the page</2> or, if the problem persists, contact your organization admin. Sorry for the inconvenience.",
     "stack-trace-label": "View stack trace",
     "title": "Fatal error!"
+  },
+  "exposed-component-error-boundary": {
+    "message": "{{componentName}} failed to load. Please try again or contact your organization admin.",
+    "title": "Something went wrong"
   },
   "extreme-value-filter": {
     "message": "Panel data was re-fetched with a more complex query to handle extremely small values in the series"

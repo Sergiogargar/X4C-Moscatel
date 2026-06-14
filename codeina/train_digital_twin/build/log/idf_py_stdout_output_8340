@@ -1,0 +1,617 @@
+Command: C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin\build\train_digital_twin.elf C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py'
+[0;32mI (118) esp_image: segment 1: paddr=0003b024 vaddr=3fc9b600 sizeESP-ROM:esp32s3-20210327[0m
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4038a341
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 17 2026 14:31:36[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2affch (176124) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0003b024 vaddr=3fc9b600 size=04ff4h ( 20468) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=b8638h (755256) map[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f8660 vaddr=3fca05f4 size=00240h (   576) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=000f88a8 vaddr=40374000 size=17550h ( 95568) load[0m
+[0;32mI (283) esp_image: segment 5: paddr=0010fe00 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (293) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (294) boot: Disabling RNG early entropy source...[0m
+[0;32mI (304) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (313) cpu_start: Pro cpu start user code[0m
+[0;32mI (313) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (315) app_init: Application information:[0m
+[0;32mI (318) app_init: Project name:     train_digital_twin[0m
+[0;32mI (323) app_init: App version:      ada9ea9-dirty[0m
+[0;32mI (328) app_init: Compile time:     May 17 2026 14:30:31[0m
+[0;32mI (333) app_init: ELF file SHA256:  78ab89138...[0m
+[0;32mI (337) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (341) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (345) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (349) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (353) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (359) heap_init: At 3FCA7D30 len 000419E0 (262 KiB): RAM[0m
+[0;32mI (364) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (369) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (374) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (381) spi_flash: detected chip: boya[0m
+[0;32mI (383) spi_flash: flash io: dio[0m
+[0;33mW (386) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (398) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (408) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (414) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (421) main_task: Started on CPU0[0m
+[0;32mI (431) main_task: Calling app_main()[0m
+[0;33mW (431) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (491) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (491) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (491) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (501) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (501) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (511) MAIN_DEP: Heap Libre: 273748 bytes | Min Heap Libre Histórico: 273748 bytes[0m
+[0;32mI (511) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (521) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (521) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (531) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (541) MAIN_DEP: ----------------------------------[0m
+[0;32mI (511) pp: pp rom version: e7ae62f[0m
+[0;32mI (551) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (561) wifi:wifi driver task: 3fcb2b80, prio:23, stack:6656, core=0[0m
+[0;32mI (571) wifi:wifi firmware version: b37c951[0m
+[0;32mI (571) wifi:wifi certification version: v7.0[0m
+[0;32mI (571) wifi:config NVS flash: enabled[0m
+[0;32mI (571) wifi:config nano formatting: disabled[0m
+[0;32mI (571) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (581) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (581) wifi:Init management short buffer num: 32[0m
+[0;32mI (591) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (591) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (591) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (601) wifi:Init static rx buffer num: 10[0m
+[0;32mI (601) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (611) wifi_init: rx ba win: 6[0m
+[0;32mI (611) wifi_init: accept mbox: 6[0m
+[0;32mI (611) wifi_init: tcpip mbox: 32[0m
+[0;32mI (611) wifi_init: udp mbox: 6[0m
+[0;32mI (621) wifi_init: tcp mbox: 6[0m
+[0;32mI (621) wifi_init: tcp tx win: 5760[0m
+[0;32mI (621) wifi_init: tcp rx win: 5760[0m
+[0;32mI (631) wifi_init: tcp mss: 1440[0m
+[0;32mI (631) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (631) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (641) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (681) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (761) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (761) wifi:enable tsf[0m
+[0;32mI (761) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (771) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (781) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (791) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (801) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (831) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (841) wifi:security: WPA2-PSK, phy: bgn, rssi: -42, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (841) wifi:pm start, type: 1[0m
+
+[0;32mI (841) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (851) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (861) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (921) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4121) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4121) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4121) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4131) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4131) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4241) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4241) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4241) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (4281) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4341) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4341) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4361) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4441) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4441) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4441) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4441) main_task: Returned from app_main()[0m
+[0;32mI (4441) SENSOR_TASK: Despertando ICM-20948...[0m
+[1;31mE (4451) SENSOR_TASK: Error escribiendo 0x01 en registro 0x06 (I2C error 263)[0m
+[0;32mI (4501) SENSOR_TASK: ICM-20948 Inicializado.[0m
+[1;31mE (4511) SENSOR_TASK: Error leyendo registro 0x2D (I2C error -1)[0m
+[0;33mW (5541) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5541) MAIN_DEP: Heap Libre: 163944 bytes | Min Heap Libre Histórico: 161868 bytes[0m
+[0;32mI (5541) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5541) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5551) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5551) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5561) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359318, Lon: -5.977183[0m
+[0;32mI (6211) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359318, Lon: -5.977191[0m
+[0;32mI (7721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359322, Lon: -5.977195[0m
+[0;32mI (7911) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359322, Lon: -5.977204[0m
+[0;32mI (9621) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359330, Lon: -5.977189[0m
+[0;33mW (10571) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10571) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 160328 bytes[0m
+[0;32mI (10571) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10571) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10581) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10581) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.00 m[0m
+[0;33mW (10591) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359330, Lon: -5.977199[0m
+[0;32mI (11321) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359330, Lon: -5.977198[0m
+[0;32mI (12721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359342, Lon: -5.977199[0m
+[0;32mI (13021) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14721) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15601) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15601) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (15601) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15601) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15611) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15611) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -24.10 m[0m
+[0;33mW (15621) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359334, Lon: -5.977214[0m
+[0;32mI (16421) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (16721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359330, Lon: -5.977212[0m
+[0;32mI (17721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359338, Lon: -5.977231[0m
+[0;32mI (18121) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359314, Lon: -5.977263[0m
+[0;32mI (19721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359277, Lon: -5.977278[0m
+[0;32mI (19821) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20631) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20631) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (20631) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20631) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20641) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20641) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (20651) MAIN_DEP: ----------------------------------[0m
+[0;32mI (20721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359265, Lon: -5.977290[0m
+[0;32mI (21521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (21721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359257, Lon: -5.977301[0m
+[0;32mI (22721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359237, Lon: -5.977321[0m
+[0;32mI (23221) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24911) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25661) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25661) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (25661) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25661) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25671) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25671) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (25681) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26611) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (30011) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30691) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30691) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (30691) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30691) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30701) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30701) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (30711) MAIN_DEP: ----------------------------------[0m
+[0;32mI (31711) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33411) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (35111) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35721) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35721) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (35721) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35721) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35731) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35731) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (35741) MAIN_DEP: ----------------------------------[0m
+[0;32mI (36811) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38511) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39781) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.977096[0m
+[0;32mI (40211) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (40721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.977089[0m
+[0;33mW (40751) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40751) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (40751) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40751) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40761) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40761) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (40771) MAIN_DEP: ----------------------------------[0m
+[0;32mI (41721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.977076[0m
+[0;32mI (41911) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359526, Lon: -5.977082[0m
+[0;32mI (43611) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359530, Lon: -5.977082[0m
+[0;32mI (44721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.977080[0m
+[0;32mI (45311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977084[0m
+[0;33mW (45781) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45781) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (45781) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45781) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45791) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45791) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (45801) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977076[0m
+[0;32mI (47011) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977074[0m
+[0;32mI (48711) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359517, Lon: -5.977070[0m
+[0;32mI (49721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977068[0m
+[0;32mI (50411) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (50731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977057[0m
+[0;33mW (50811) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50811) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (50811) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50811) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50821) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50821) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (50831) MAIN_DEP: ----------------------------------[0m
+[0;32mI (51731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977052[0m
+[0;32mI (52111) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53811) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (55511) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55841) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55841) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (55841) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55841) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55851) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55851) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (55861) MAIN_DEP: ----------------------------------[0m
+[0;32mI (57211) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.977014[0m
+[0;32mI (58911) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (59721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359538, Lon: -5.977006[0m
+[0;32mI (60611) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (60721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976988[0m
+[0;33mW (60871) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (60871) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (60871) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (60871) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (60881) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (60881) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (60891) MAIN_DEP: ----------------------------------[0m
+[0;32mI (61721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359534, Lon: -5.976984[0m
+[0;32mI (62311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (62721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976972[0m
+[0;32mI (63721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359530, Lon: -5.976974[0m
+[0;32mI (64011) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (64731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359534, Lon: -5.976954[0m
+[0;32mI (65711) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (65731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976946[0m
+[0;33mW (65901) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (65901) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (65901) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (65901) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (65911) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (65911) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -23.90 m[0m
+[0;33mW (65921) MAIN_DEP: ----------------------------------[0m
+[0;32mI (66731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976942[0m
+[0;32mI (67411) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (67721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359546, Lon: -5.976931[0m
+[0;32mI (68731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359363, Lon: -5.977020[0m
+[0;32mI (69111) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (69731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359281, Lon: -5.977053[0m
+[0;32mI (70731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359224, Lon: -5.977073[0m
+[0;32mI (70811) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (70931) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (70931) MAIN_DEP: Heap Libre: 162168 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (70931) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (70931) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (70941) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (70941) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -30.00 m[0m
+[0;33mW (70951) MAIN_DEP: ----------------------------------[0m
+[0;32mI (71731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359196, Lon: -5.977077[0m
+[0;32mI (72511) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (72731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359176, Lon: -5.977094[0m
+[0;32mI (73731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359167, Lon: -5.977104[0m
+[0;32mI (74211) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (74731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359151, Lon: -5.977118[0m
+[0;32mI (75731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359151, Lon: -5.977109[0m
+[0;32mI (75911) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (75961) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (75961) MAIN_DEP: Heap Libre: 162132 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (75961) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (75961) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (75971) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (75971) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -30.10 m[0m
+[0;33mW (75981) MAIN_DEP: ----------------------------------[0m
+[0;32mI (76731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359143, Lon: -5.977115[0m
+[0;32mI (77611) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (77731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359143, Lon: -5.977113[0m
+[0;32mI (78731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359135, Lon: -5.977110[0m
+[0;32mI (79311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (79731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359127, Lon: -5.977120[0m
+[0;32mI (80731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359127, Lon: -5.977119[0m
+[0;33mW (80991) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (80991) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (80991) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (80991) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (81001) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (81001) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -26.70 m[0m
+[0;33mW (81011) MAIN_DEP: ----------------------------------[0m
+[0;32mI (81011) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (81731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359131, Lon: -5.977119[0m
+[0;32mI (82721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359131, Lon: -5.977122[0m
+[0;32mI (82721) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (83721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359139, Lon: -5.977126[0m
+[0;32mI (84421) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (84721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359143, Lon: -5.977137[0m
+[0;32mI (85731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359151, Lon: -5.977153[0m
+[0;33mW (86021) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (86021) MAIN_DEP: Heap Libre: 163680 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (86021) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (86021) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (86031) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (86031) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -22.60 m[0m
+[0;33mW (86041) MAIN_DEP: ----------------------------------[0m
+[0;32mI (86121) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (86731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359163, Lon: -5.977157[0m
+[0;32mI (87731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359172, Lon: -5.977167[0m
+[0;32mI (87821) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (88731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359188, Lon: -5.977167[0m
+[0;32mI (89521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (89731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359212, Lon: -5.977142[0m
+[0;32mI (90731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359233, Lon: -5.977112[0m
+[0;33mW (91051) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (91051) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (91051) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (91051) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (91061) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (91061) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -11.40 m[0m
+[0;33mW (91071) MAIN_DEP: ----------------------------------[0m
+[0;32mI (91221) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (91731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359257, Lon: -5.977089[0m
+[0;32mI (92731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359277, Lon: -5.977072[0m
+[0;32mI (92921) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (93731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359285, Lon: -5.977064[0m
+[0;32mI (94621) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (94731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359306, Lon: -5.977046[0m
+[0;32mI (95731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359322, Lon: -5.977047[0m
+[0;33mW (96081) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (96081) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (96081) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (96081) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (96091) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (96091) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 3.20 m[0m
+[0;33mW (96101) MAIN_DEP: ----------------------------------[0m
+[0;32mI (96321) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (96731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359334, Lon: -5.977054[0m
+[0;32mI (97731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359338, Lon: -5.977062[0m
+[0;32mI (98021) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (98731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359347, Lon: -5.977060[0m
+[0;32mI (99721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359355, Lon: -5.977063[0m
+[0;32mI (99721) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (100731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359367, Lon: -5.977065[0m
+[0;33mW (101111) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (101111) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (101111) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (101111) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (101121) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (101121) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 14.10 m[0m
+[0;33mW (101131) MAIN_DEP: ----------------------------------[0m
+[0;32mI (101421) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (101731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359375, Lon: -5.977063[0m
+[0;32mI (102731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.977053[0m
+[0;32mI (103121) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (103731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.977050[0m
+[0;32mI (104731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359379, Lon: -5.977042[0m
+[0;32mI (104821) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (105731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.977053[0m
+[0;33mW (106141) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (106141) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (106141) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (106141) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (106151) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (106151) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 16.80 m[0m
+[0;33mW (106161) MAIN_DEP: ----------------------------------[0m
+[0;32mI (106521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (106731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359387, Lon: -5.977048[0m
+[0;32mI (107731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359379, Lon: -5.977063[0m
+[0;32mI (108221) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (108731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.977054[0m
+[0;32mI (109721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359379, Lon: -5.977049[0m
+[0;32mI (109921) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (110731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359375, Lon: -5.977050[0m
+[0;33mW (111171) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (111171) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (111171) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (111171) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (111181) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (111181) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 21.00 m[0m
+[0;33mW (111191) MAIN_DEP: ----------------------------------[0m
+[0;32mI (111621) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (111731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359375, Lon: -5.977038[0m
+[0;32mI (112731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359375, Lon: -5.977031[0m
+[0;32mI (113321) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (113731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359379, Lon: -5.977012[0m
+[0;32mI (114731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359371, Lon: -5.977012[0m
+[0;32mI (115021) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (115731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359375, Lon: -5.976992[0m
+[0;33mW (116201) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (116201) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (116201) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (116201) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (116211) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (116211) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 20.90 m[0m
+[0;33mW (116221) MAIN_DEP: ----------------------------------[0m
+[0;32mI (116721) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (116731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.976970[0m
+[0;32mI (117721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359387, Lon: -5.976973[0m
+[0;32mI (118421) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (118721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359326, Lon: -5.977201[0m
+[0;32mI (119731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359326, Lon: -5.977166[0m
+[0;32mI (120121) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (120731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359330, Lon: -5.977137[0m
+[0;33mW (121231) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (121231) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (121231) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (121231) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (121241) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (121241) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -13.50 m[0m
+[0;33mW (121251) MAIN_DEP: ----------------------------------[0m
+[0;32mI (121741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359342, Lon: -5.977104[0m
+[0;32mI (121821) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (122731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359355, Lon: -5.977091[0m
+[0;32mI (123521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (123731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359355, Lon: -5.977088[0m
+[0;32mI (124731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359359, Lon: -5.977083[0m
+[0;32mI (125221) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (125731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359371, Lon: -5.977070[0m
+[0;33mW (126261) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (126261) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (126261) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (126261) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (126271) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (126271) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -11.20 m[0m
+[0;33mW (126281) MAIN_DEP: ----------------------------------[0m
+[0;32mI (126731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359371, Lon: -5.977070[0m
+[0;32mI (126931) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (127731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359383, Lon: -5.977076[0m
+[0;32mI (128631) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (128731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359387, Lon: -5.977076[0m
+[0;32mI (129731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359399, Lon: -5.977081[0m
+[0;32mI (130331) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (130731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359408, Lon: -5.977082[0m
+[0;33mW (131291) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (131291) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (131291) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (131291) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (131301) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (131301) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.80 m[0m
+[0;33mW (131311) MAIN_DEP: ----------------------------------[0m
+[0;32mI (131731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359420, Lon: -5.977087[0m
+[0;32mI (132031) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (132731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359440, Lon: -5.977077[0m
+[0;32mI (133721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359452, Lon: -5.977069[0m
+[0;32mI (133731) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (134721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359460, Lon: -5.977078[0m
+[0;32mI (135431) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (135731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359465, Lon: -5.977075[0m
+[0;33mW (136321) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (136321) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (136321) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (136321) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (136331) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (136331) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.70 m[0m
+[0;33mW (136341) MAIN_DEP: ----------------------------------[0m
+[0;32mI (136731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359469, Lon: -5.977079[0m
+[0;32mI (137131) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (137721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359469, Lon: -5.977091[0m
+[0;32mI (138731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359465, Lon: -5.977109[0m
+[0;32mI (138831) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (139731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359477, Lon: -5.977100[0m
+[0;32mI (140521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (140731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359493, Lon: -5.977103[0m
+[0;33mW (141351) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (141351) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (141351) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (141351) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (141361) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (141361) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.70 m[0m
+[0;33mW (141371) MAIN_DEP: ----------------------------------[0m
+[0;32mI (141721) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359497, Lon: -5.977103[0m
+[0;32mI (142231) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (142731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359497, Lon: -5.977109[0m
+[0;32mI (143731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977099[0m
+[0;32mI (143931) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (144731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977116[0m
+[0;32mI (145621) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (145741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977122[0m
+[0;33mW (146381) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (146381) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 158324 bytes[0m
+[0;32mI (146381) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (146381) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (146391) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (146391) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.70 m[0m
+[0;33mW (146401) MAIN_DEP: ----------------------------------[0m
+[0;32mI (146731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977121[0m
+[0;32mI (147321) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (147731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977124[0m
+[0;32mI (148731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359546, Lon: -5.977115[0m
+[0;32mI (149031) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (149731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.977124[0m
+[0;32mI (150731) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (150731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.977123[0m
+[0;33mW (151411) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (151411) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 156864 bytes[0m
+[0;32mI (151411) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (151411) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (151421) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (151421) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.60 m[0m
+[0;33mW (151431) MAIN_DEP: ----------------------------------[0m
+[0;32mI (151731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359538, Lon: -5.977132[0m
+[0;32mI (152431) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (152731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.977135[0m
+[0;32mI (153731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.977135[0m
+[0;32mI (154131) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (154731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359526, Lon: -5.977142[0m
+[0;32mI (155731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359517, Lon: -5.977146[0m
+[0;32mI (155831) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (156441) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (156441) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 156864 bytes[0m
+[0;32mI (156441) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (156441) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (156451) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (156451) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.60 m[0m
+[0;33mW (156461) MAIN_DEP: ----------------------------------[0m
+[0;32mI (156731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359513, Lon: -5.977148[0m
+[0;32mI (157531) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (157731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359526, Lon: -5.977140[0m
+[0;32mI (158731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.977139[0m
+[0;32mI (159231) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (159731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359505, Lon: -5.977154[0m
+[0;32mI (160731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359493, Lon: -5.977160[0m
+[0;32mI (160931) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (161471) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (161471) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 156864 bytes[0m
+[0;32mI (161471) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (161471) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (161481) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (161481) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.60 m[0m
+[0;33mW (161491) MAIN_DEP: ----------------------------------[0m
+[0;32mI (161741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359497, Lon: -5.977099[0m
+[0;32mI (162631) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (162741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359505, Lon: -5.977054[0m
+[0;32mI (163741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977027[0m
+[0;32mI (164331) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (164731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359509, Lon: -5.977009[0m
+[0;32mI (165731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359517, Lon: -5.976996[0m
+[0;32mI (166031) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (166501) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (166501) MAIN_DEP: Heap Libre: 163748 bytes | Min Heap Libre Histórico: 156864 bytes[0m
+[0;32mI (166501) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (166501) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (166511) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (166511) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.50 m[0m
+[0;33mW (166521) MAIN_DEP: ----------------------------------[0m
+[0;32mI (166731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.976984[0m
+[0;32mI (167731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359526, Lon: -5.976974[0m
+[0;32mI (167731) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (168741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359521, Lon: -5.976961[0m
+[0;32mI (169431) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (169731) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359530, Lon: -5.976950[0m
+[0;32mI (170741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359538, Lon: -5.976943[0m
+[0;32mI (171131) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (171531) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (171531) MAIN_DEP: Heap Libre: 163704 bytes | Min Heap Libre Histórico: 156864 bytes[0m
+[0;32mI (171531) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (171531) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (171541) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (171541) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: -10.40 m[0m
+[0;33mW (171551) MAIN_DEP: ----------------------------------[0m
+[0;32mI (171741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976938[0m
+[0;32mI (172741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359542, Lon: -5.976937[0m
+[0;32mI (172831) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (173741) TELEMETRY_TASK: GPS FIJADO: Lat: 37.359562, Lon: -5.976943[0m
+[0;32mI (174531) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m

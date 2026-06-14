@@ -1,5 +1,39 @@
 # Changelog
 
+## 2.0.7
+
+##### Chores
+
+*  add enrichment for conversion measurement (#1251) (0fb2aecc)
+*  make tree filters GA, remove feature toggle (#1245) (a732ac61)
+
+##### Bug Fixes
+
+* **cve:**
+  *  override protobufjs to patched versions (#1249) (6c768df8)
+  *  override fast-uri (#1243) (5a2f2eb7)
+
+##### Refactors
+
+* **error-handling:**
+  *  add exposed component + route-level error boundaries (#1253) (e0e7d5ef)
+  *  replace global error capture with scoped React Error Boundary (#1244) (6d56d7b6)
+
+
+## 2.0.6
+
+##### Chores
+
+* **extensions:**  use group type from grafana data (#1231) (9742b9d0)
+*  skip attestation for forks (#1241) (ae70ad30)
+* **deps:**  Update dependency @grafana/plugin-e2e to v3.6.1 (#1232) (ff280ca4)
+
+##### Bug Fixes
+
+* **ci/cd:**  add permissions to workflow (#1240) (c77e7641)
+* **deps:**  override postcss to >=8.5.10 for CVE fix (#1239) (f45b7bf7)
+
+
 ## 2.0.5
 
 ##### Bug Fixes

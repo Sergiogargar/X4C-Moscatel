@@ -1,0 +1,2 @@
+# Disable LCD component to avoid compiler bug
+CONFIG_ESP_LCD_ENABLED=n

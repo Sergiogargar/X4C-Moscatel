@@ -1,0 +1,2216 @@
+Command: C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM4 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin\build\train_digital_twin.elf C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x42009c4c
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x14f0
+load:0x403c8700,len:0xda0
+load:0x403cb700,len:0x2f58
+entry 0x403c8908
+[0;32mI (24) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time May 17 2026 14:31:36[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (27) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00300000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c0c0020 size=2af2ch (175916) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0003af54 vaddr=3fc9b600 size=050c4h ( 20676) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=b85c4h (755140) map[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 size=00170h (   368) load[0m
+[0;32mI (259) esp_image: segment 4: paddr=000f8764 vaddr=40374000 size=17550h ( 95568) load[0m
+[0;32mI (283) esp_image: segment 5: paddr=0010fcbc vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (293) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (294) boot: Disabling RNG early entropy source...[0m
+[0;32mI (304) cpu_start: Multicore app[0m
+[0;32mI (312) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[0;32mI (313) cpu_start: Pro cpu start user code[0m
+[0;32mI (313) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (314) app_init: Application information:[0m
+[0;32mI (318) app_init: Project name:     train_digital_twin[0m
+[0;32mI (323) app_init: App version:      ada9ea9-dirty[0m
+[0;32mI (328) app_init: Compile time:     May 17 2026 14:30:31[0m
+[0;32mI (333) app_init: ELF file SHA256:  8698efb62...[0m
+[0;32mI (337) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (341) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (345) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (349) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (352) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (359) heap_init: At 3FCA7D20 len 000419F0 (262 KiB): RAM[0m
+[0;32mI (364) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (369) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (374) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (380) spi_flash: detected chip: boya[0m
+[0;32mI (383) spi_flash: flash io: dio[0m
+[0;33mW (386) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (398) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (408) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (414) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (421) main_task: Started on CPU0[0m
+[0;32mI (431) main_task: Calling app_main()[0m
+[0;33mW (431) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (451) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (451) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (451) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (461) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (461) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (471) MAIN_DEP: Heap Libre: 273904 bytes | Min Heap Libre Histórico: 273904 bytes[0m
+[0;32mI (481) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (481) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (491) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (491) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (501) MAIN_DEP: ----------------------------------[0m
+[0;32mI (471) pp: pp rom version: e7ae62f[0m
+[0;32mI (511) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (521) wifi:wifi driver task: 3fcb2ae4, prio:23, stack:6656, core=0[0m
+[0;32mI (531) wifi:wifi firmware version: b37c951[0m
+[0;32mI (531) wifi:wifi certification version: v7.0[0m
+[0;32mI (531) wifi:config NVS flash: enabled[0m
+[0;32mI (531) wifi:config nano formatting: disabled[0m
+[0;32mI (531) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (541) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (541) wifi:Init management short buffer num: 32[0m
+[0;32mI (551) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (551) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (561) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (561) wifi:Init static rx buffer num: 10[0m
+[0;32mI (561) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (571) wifi_init: rx ba win: 6[0m
+[0;32mI (571) wifi_init: accept mbox: 6[0m
+[0;32mI (571) wifi_init: tcpip mbox: 32[0m
+[0;32mI (581) wifi_init: udp mbox: 6[0m
+[0;32mI (581) wifi_init: tcp mbox: 6[0m
+[0;32mI (581) wifi_init: tcp tx win: 5760[0m
+[0;32mI (581) wifi_init: tcp rx win: 5760[0m
+[0;32mI (591) wifi_init: tcp mss: 1440[0m
+[0;32mI (591) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (591) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (601) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (651) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (651) wifi:enable tsf[0m
+[0;32mI (651) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (661) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (661) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (671) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (681) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (711) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (711) wifi:security: WPA2-PSK, phy: bgn, rssi: -46, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (721) wifi:pm start, type: 1[0m
+
+[0;32mI (721) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (731) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (741) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (741) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4021) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4021) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4021) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4031) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4031) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4141) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4141) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4141) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[0;32mI (4181) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4241) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4241) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4271) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4341) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4341) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4341) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4341) main_task: Returned from app_main()[0m
+[0;33mW (5501) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5501) MAIN_DEP: Heap Libre: 164104 bytes | Min Heap Libre Histórico: 160392 bytes[0m
+[0;32mI (5501) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5501) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5511) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5511) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5521) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5531) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6561) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7581) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8611) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9641) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10531) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10531) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 160392 bytes[0m
+[0;32mI (10531) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10531) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10541) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10541) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10551) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10661) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11691) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12711) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13741) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14771) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15561) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15561) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (15561) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15561) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15571) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15571) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15581) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15791) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (16821) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (17841) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18871) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19901) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20591) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20591) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (20591) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20591) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20601) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20601) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20611) MAIN_DEP: ----------------------------------[0m
+[0;32mI (20921) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (21951) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (22971) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24001) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (25031) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25621) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25621) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (25621) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25621) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25631) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25631) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25641) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26051) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27081) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28101) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (29131) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (30151) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30651) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30651) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (30651) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30651) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30661) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30661) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30671) MAIN_DEP: ----------------------------------[0m
+[0;32mI (31181) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (32211) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33231) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (34261) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (35281) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35681) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35681) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (35681) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35681) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35691) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35691) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (35701) MAIN_DEP: ----------------------------------[0m
+[0;32mI (36311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (37341) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38361) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39391) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (40411) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (40711) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40711) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (40711) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40711) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40721) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40721) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (40731) MAIN_DEP: ----------------------------------[0m
+[0;32mI (41441) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42471) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43491) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (44521) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45541) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (45741) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45741) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158932 bytes[0m
+[0;32mI (45741) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45741) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45751) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45751) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (45761) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46571) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47601) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48621) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (49651) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (50671) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (50771) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50771) MAIN_DEP: Heap Libre: 162320 bytes | Min Heap Libre Histórico: 158484 bytes[0m
+[0;32mI (50771) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50771) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50781) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50781) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (50791) MAIN_DEP: ----------------------------------[0m
+[0;32mI (51701) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (52731) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53751) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (54781) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55801) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55801) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158484 bytes[0m
+[0;32mI (55801) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55801) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55811) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (55811) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55821) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (55831) MAIN_DEP: ----------------------------------[0m
+[0;32mI (56841) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (57871) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58921) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 467.77 Hz | Amplitud: -80.25 dB[0m
+[0;32mI (59951) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (60831) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (60831) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158484 bytes[0m
+[0;32mI (60831) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (60831) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (60841) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (60841) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (60851) MAIN_DEP: ----------------------------------[0m
+[0;32mI (60981) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (62001) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (63031) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (64251) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -93.11 dB[0m
+[0;32mI (65281) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (65861) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (65861) MAIN_DEP: Heap Libre: 163880 bytes | Min Heap Libre Histórico: 158484 bytes[0m
+[0;32mI (65861) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (65861) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (65871) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (65871) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (65881) MAIN_DEP: ----------------------------------[0m
+[0;32mI (66311) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (4003) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4003) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4003) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4013) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4013) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4123) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4123) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4163) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4223) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4223) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4253) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4323) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4323) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4323) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4323) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 164008 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5533) MAIN_DEP: ----------------------------------[0m
+[0;32mI (6553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8603) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163784 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10653) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11683) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13733) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163784 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15783) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (16813) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (17833) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18863) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163784 bytes | Min Heap Libre Histórico: 160264 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (20913) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (21943) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizee(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (400) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (410) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (416) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (423) main_task: Started on CPU0[0m
+[0;32mI (433) main_task: Calling app_main()[0m
+[0;33mW (433) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (453) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (453) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (453) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (463) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (463) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (473) MAIN_DEP: Heap Libre: 273764 bytes | Min Heap Libre Histórico: 273764 bytes[0m
+[0;32mI (483) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (483) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (723) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (723) wifi:security: WPA2-PSK, phy: bgn, rssi: -40, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (753) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4113) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4113) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4113) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4123) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4123) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4223) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4223) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4263) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4323) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4323) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4363) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4423) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4423) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4423) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4423) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 164000 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163776 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11763) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14863) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163776 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 499.02 Hz | Amplitud: -94.91 dB[0m
+[0;32mI (16923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 90.82 Hz | Amplitud: -42.73 dB[0m
+[0;32mI (19183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (20213) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163776 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (21333) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 15.62 Hz | Amplitud: -92.21 dB[0m
+[0;32mI (22363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (23393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 111.33 Hz | Amplitud: -40.96 dB[0m
+[0;32mI (25443) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25623) MAIN_DEP: Heap Libre: 163776 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (25623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26473) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 167.97 Hz | Amplitud: -40.32 dB[0m
+[0;32mI (29553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30653) MAIN_DEP: Heap Libre: 163728 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (30653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (30783) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 497.07 Hz | Amplitud: -81.31 dB[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (783) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4043) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4043) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4043) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4053) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4053) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4153) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4153) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4193) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4253) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4253) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4283) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4353) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4353) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4353) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4353) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163996 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (8243) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (10303) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (11323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14403) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (15433) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (16453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (17483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (20563) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 162172 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (21583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (22613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (23633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25623) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (25623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (25693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (26713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28763) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (29793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30653) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (30653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (30823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (31843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (32873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33893) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (34923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35683) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35683) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (35683) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35683) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (35703) MAIN_DEP: ----------------------------------[0m
+[0;32mI (35953) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (36973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38003) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39023) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (40053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (40713) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40713) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (40713) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40713) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (40733) MAIN_DEP: ----------------------------------[0m
+[0;32mI (41083) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43133) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (44153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (45743) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45743) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (45743) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45743) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (45763) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46213) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (49293) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (50323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (50773) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50773) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 158596 bytes[0m
+[0;32mI (50773) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50773) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (50793) MAIN_DEP: ----------------------------------[0m
+[0;32mI (51353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (52373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53403) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (54423) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (55453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55803) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55803) MAIN_DEP: Heap Libre: 163768 bytes | Min Heap Libre Histórico: 158596 bytes[0m
+[0;32mI (55803) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55803) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (55823) MAIN_DEP: ----------------------------------[0m
+[0;32mI (56483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (57503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (683) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (693) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (723) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (723) wifi:security: WPA2-PSK, phy: bgn, rssi: -40, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (733) wifi:pm start, type: 1[0m
+
+[0;32mI (733) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (743) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (753) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (753) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4113) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4113) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4113) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4123) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4123) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4233) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4233) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4273) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4333) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4333) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4363) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4433) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4433) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4433) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4433) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163960 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7673) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14853) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 428.71 Hz | Amplitud: -92.37 dB[0m
+[0;32mI (16913) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (17933) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19123) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (20153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (21473) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (22493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (23523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24563) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (25593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25623) MAIN_DEP: Heap Libre: 162140 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (25623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (29693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30653) MAIN_DEP: Heap Libre: 163700 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (30653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (30723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (31743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (32773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (34823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35683) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35683) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (35683) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35683) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (35703) MAIN_DEP: ----------------------------------[0m
+[0;32mI (35843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (36873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (37903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39953) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (40713) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40713) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (40713) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40713) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (40733) MAIN_DEP: ----------------------------------[0m
+[0;32mI (40973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42003) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43023) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (44053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45083) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (45743) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45743) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160216 bytes[0m
+[0;32mI (45743) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45743) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (45763) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47133) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (49183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (50203) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (50773) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50773) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (50773) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50773) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (50793) MAIN_DEP: ----------------------------------[0m
+[0;32mI (51233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (52263) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53283) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (54313) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (55333) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55803) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55803) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (55803) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55803) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (55823) MAIN_DEP: ----------------------------------[0m
+[0;32mI (56363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (57393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (59443) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (60463) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (60833) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (60833) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (60833) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (60833) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (60853) MAIN_DEP: ----------------------------------[0m
+[0;32mI (61493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (62523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (63543) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (64573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (65593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (65863) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (65863) MAIN_DEP: Heap Libre: 163744 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (65863) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (65863) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (65883) MAIN_DEP: ----------------------------------[0m
+[0;32mI (66623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (67643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (68673) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (69703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (70723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (70893) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (70893) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (70893) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (70893) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (70913) MAIN_DEP: ----------------------------------[0m
+[0;32mI (71753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (72773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (73803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (74833) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (75853) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (75923) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (75923) MAIN_DEP: Heap Libre: 162140 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (75923) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (75923) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (75943) MAIN_DEP: ----------------------------------[0m
+[0;32mI (76883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (77903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (78933) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (79953) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (80953) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (80953) MAIN_DEP: Heap Libre: 163744 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (80953) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (80953) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (80973) MAIN_DEP: ----------------------------------[0m
+[0;32mI (80983) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (82013) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (83043) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (84063) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (85093) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (85983) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (85983) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (85983) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (85983) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (86003) MAIN_DEP: ----------------------------------[0m
+[0;32mI (86113) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (87143) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (88173) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (89193) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (90223) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (91013) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (91013) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (91013) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (91013) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (91023) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (91023) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (91033) MAIN_DEP: ----------------------------------[0m
+[0;32mI (91243) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (92273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (93303) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (94323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (95353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (96043) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (96043) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (96043) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (96043) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (96053) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (96053) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (96063) MAIN_DEP: ----------------------------------[0m
+[0;32mI (96373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (97403) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (98433) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (99453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (100483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (101073) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (101073) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (101073) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (101073) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (101083) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (101083) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (101093) MAIN_DEP: ----------------------------------[0m
+[0;32mI (101503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (102533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (103563) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (104583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (105613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (106103) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (106103) MAIN_DEP: Heap Libre: 163736 bytes | Min Heap Libre Histórico: 160124 bytes[0m
+[0;32mI (106103) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (106103) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (106113) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (106113) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (106123) MAIN_DEP: ----------------------------------[0m
+[0;32mI (106633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (107663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (108683) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (109713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (110743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (111133) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (111133) MAIN_DEP: Heap Libre: 163560 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (111133) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (111133) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (111143) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (111143) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (111153) MAIN_DEP: ----------------------------------[0m
+[0;32mI (111763) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (112793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (113813) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (114843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (115873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (116163) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (116163) MAIN_DEP: Heap Libre: 163524 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (116163) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (116163) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (116173) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (116173) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (116183) MAIN_DEP: ----------------------------------[0m
+[0;32mI (116893) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (117923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (118943) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (119973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (120993) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (121193) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (121193) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (121193) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (121193) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (121203) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (121203) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (121213) MAIN_DEP: ----------------------------------[0m
+[0;32mI (122023) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (123053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (124073) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (125103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (126123) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (126223) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (126223) MAIN_DEP: Heap Libre: 163544 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (126223) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (126223) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (126233) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (126233) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (126243) MAIN_DEP: ----------------------------------[0m
+[0;32mI (127153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (128183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (129203) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (130233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (131253) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (131253) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (131253) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (131253) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (131253) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (131273) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (131273) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (131283) MAIN_DEP: ----------------------------------[0m
+[0;32mI (132293) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (133313) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (134343) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (135363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (136293) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (136293) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (136293) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (136293) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (136303) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (136303) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (136313) MAIN_DEP: ----------------------------------[0m
+[0;32mI (136393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (137413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (138443) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (139473) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (140493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (141323) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (141323) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (141323) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (141323) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (141333) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (141333) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (141343) MAIN_DEP: ----------------------------------[0m
+[0;32mI (141523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (142543) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (143573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (144603) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (145623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (146353) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (146353) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (146353) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (146353) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (146363) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (146363) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (146373) MAIN_DEP: ----------------------------------[0m
+[0;32mI (146653) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (147673) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (148703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (149733) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (150753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (151383) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (151383) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (151383) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (151383) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (151393) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (151393) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (151403) MAIN_DEP: ----------------------------------[0m
+[0;32mI (151783) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (152803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (153833) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (154863) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (155883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (156413) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (156413) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (156413) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (156413) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (156423) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (156423) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (156433) MAIN_DEP: ----------------------------------[0m
+[0;32mI (156913) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (157933) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (158963) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (159993) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (161013) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (161443) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (161443) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (161443) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (161443) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (161453) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (161453) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (161463) MAIN_DEP: ----------------------------------[0m
+[0;32mI (162043) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (163063) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (164093) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (165113) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (166143) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (166473) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (166473) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (166473) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (166473) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (166483) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (166483) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (166493) MAIN_DEP: ----------------------------------[0m
+[0;32mI (167173) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (168193) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (169223) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (170243) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (171273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (171503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (171503) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (171503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (171503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (171513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (171513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (171523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (172293) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (173323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (174353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (175373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (176403) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (176533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (176533) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (176533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (176533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (176543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (176543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (176553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (177423) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (178453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (179483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (180503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (181533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (181563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (181563) MAIN_DEP: Heap Libre: 161984 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (181563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (181563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (181573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (181573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (181583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (182553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (183583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (184603) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (185633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (186593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (186593) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (186593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (186593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (186603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (186603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (186613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (186663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (187683) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (188713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (189733) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (190763) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (191623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (191623) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (191623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (191623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (191633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (191633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (191643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (191793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (192813) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (193843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (194863) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (195893) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (196653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (196653) MAIN_DEP: Heap Libre: 163544 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (196653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (196653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (196663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (196663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (196673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (196923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (197943) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (198973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (199993) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (201023) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (201683) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (201683) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (201683) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (201683) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (201693) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (201693) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (201703) MAIN_DEP: ----------------------------------[0m
+[0;32mI (202053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (203073) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (204103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (205123) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (206153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (206713) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (206713) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (206713) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (206713) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (206723) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (206723) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (206733) MAIN_DEP: ----------------------------------[0m
+[0;32mI (207173) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (208203) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (209233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (210253) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (211283) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (211743) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (211743) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (211743) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (211743) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (211753) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (211753) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (211763) MAIN_DEP: ----------------------------------[0m
+[0;32mI (212303) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (213333) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (214363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (215383) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (216413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (216773) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (216773) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (216773) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (216773) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (216783) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (216783) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (216793) MAIN_DEP: ----------------------------------[0m
+[0;32mI (217433) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (218463) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (219483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (220513) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (221543) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (221803) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (221803) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158340 bytes[0m
+[0;32mI (221803) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (221803) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (221813) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (221813) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (221823) MAIN_DEP: ----------------------------------[0m
+[0;32mI (222563) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -45.67 dB[0m
+[0;32mI (223593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (224713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -99.49 dB[0m
+[0;33mW (226833) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (226833) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158244 bytes[0m
+[0;32mI (226833) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (226833) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (226843) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (226843) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -99.49 dB | Altitud: 0.00 m[0m
+[0;33mW (226853) MAIN_DEP: ----------------------------------[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (713) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (713) wifi:security: WPA2-PSK, phy: bgn, rssi: -37, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (733) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (813) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4073) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4073) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4073) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4083) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4083) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4183) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4183) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4223) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4283) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4283) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4313) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4383) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4383) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4383) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4383) main_task: Returned from app_main()[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (793) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (803) wifi:security: WPA2-PSK, phy: bgn, rssi: -36, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (803) wifi:pm start, type: 1[0m
+
+[0;32mI (803) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (813) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (823) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (843) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4203) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4203) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4203) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4213) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4213) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4313) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4313) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4353) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4413) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4413) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4443) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4513) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4513) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4513) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4513) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163992 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8783) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163764 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163764 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163764 bytes | Min Heap Libre Histórico: 160284 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (683) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (693) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (713) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (713) wifi:security: WPA2-PSK, phy: bgn, rssi: -31, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (753) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4113) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4113) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4113) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4123) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4123) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4223) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4223) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4263) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4323) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4323) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4363) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4423) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4423) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4423) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4423) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163984 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8893) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163760 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 size(334) app_init: ELF file SHA256:  8698efb62...[0m
+[0;32mI (339) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (343) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (346) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (350) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (354) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (361) heap_init: At 3FCA7D20 len 000419F0 (262 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (376) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: boya[0m
+[0;32mI (385) spi_flash: flash io: dio[0m
+[0;33mW (388) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (400) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (410) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (416) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (423) main_task: Started on CPU0[0m
+[0;32mI (433) main_task: Calling app_main()[0m
+[0;33mW (433) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (453) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (453) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (453) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (463) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (463) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (473) MAIN_DEP: Heap Libre: 273764 bytes | Min Heap Libre Histórico: 273764 bytes[0m
+[0;32mI (483) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (483) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (713) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (713) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (723) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (733) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (763) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (763) wifi:security: WPA2-PSK, phy: bgn, rssi: -34, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (773) wifi:pm start, type: 1[0m
+
+[0;32mI (773) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (783) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (793) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (683) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (723) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (723) wifi:security: WPA2-PSK, phy: bgn, rssi: -34, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (733) wifi:pm start, type: 1[0m
+
+[0;32mI (733) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (743) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (753) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (433) main_task: Calling app_main()[0m
+[0;33mW (433) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (453) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (453) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (453) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (463) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (463) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (473) MAIN_DEP: Heap Libre: 273764 bytes | Min Heap Libre Histórico: 273764 bytes[0m
+[0;32mI (483) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (483) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (723) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (723) wifi:security: WPA2-PSK, phy: bgn, rssi: -35, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizen:      ada9ea9-dirty[0m
+[0;32mI (329) app_init: Compile time:     May 17 2026 14:30:31[0m
+[0;32mI (334) app_init: ELF file SHA256:  8698efb62...[0m
+[0;32mI (339) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (343) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (346) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (350) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (354) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (361) heap_init: At 3FCA7D20 len 000419F0 (262 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (376) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: boya[0m
+[0;32mI (385) spi_flash: flash io: dio[0m
+[0;33mW (388) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (400) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (410) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (416) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (423) main_task: Started on CPU0[0m
+[0;32mI (433) main_task: Calling app_main()[0m
+[0;33mW (433) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (453) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (453) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (453) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (463) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (463) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (473) MAIN_DEP: Heap Libre: 273764 bytes | Min Heap Libre Histórico: 273764 bytes[0m
+[0;32mI (483) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (483) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (723) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (723) wifi:security: WPA2-PSK, phy: bgn, rssi: -35, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (733) wifi:pm start, type: 1[0m
+
+[0;32mI (733) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (753) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (2493) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (2493) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (2493) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (2503) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (2503) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (2603) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (2603) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (2643) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (2703) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (2703) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (2723) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (2803) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (2803) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (2803) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (2803) main_task: Returned from app_main()[0m
+[0;32mI (3993) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (5013) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163700 bytes | Min Heap Libre Histórico: 160260 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (6043) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (346) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (350) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (354) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (361) heap_init: At 3FCA7D20 len 000419F0 (262 KiB): RAM[0m
+[0;32mI (366) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (371) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (376) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (382) spi_flash: detected chip: boya[0m
+[0;32mI (385) spi_flash: flash io: dio[0m
+[0;33mW (388) spi_flash: Detected size(16384k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (400) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (410) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (416) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (423) main_task: Started on CPU0[0m
+[0;32mI (433) main_task: Calling app_main()[0m
+[0;33mW (433) MAIN_DEP: Iniciando Gemelo Digital en MODO DEPURACIÓN (MAIN_DEP)[0m
+[0;32mI (453) MAIN_DEP: Servicios del sistema (NVS, Netif, Event Loop) inicializados.[0m
+[0;32mI (453) MAIN_DEP: Colas y semáforos creados correctamente.[0m
+[0;32mI (453) MAIN_DEP: Memory pool inicializado con 10 elementos.[0m
+[0;32mI (463) MAIN_DEP: Iniciando Wi-Fi y esperando conexión...[0m
+[0;33mW (463) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (473) MAIN_DEP: Heap Libre: 273764 bytes | Min Heap Libre Histórico: 273764 bytes[0m
+[0;32mI (483) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (483) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (493) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (503) MAIN_DEP: ----------------------------------[0m
+[0;32mI (473) pp: pp rom version: e7ae62f[0m
+[0;32mI (513) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (523) wifi:wifi driver task: 3fcb2b70, prio:23, stack:6656, core=0[0m
+[0;32mI (533) wifi:wifi firmware version: b37c951[0m
+[0;32mI (533) wifi:wifi certification version: v7.0[0m
+[0;32mI (533) wifi:config NVS flash: enabled[0m
+[0;32mI (533) wifi:config nano formatting: disabled[0m
+[0;32mI (533) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (543) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (543) wifi:Init management short buffer num: 32[0m
+[0;32mI (553) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (553) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (563) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (563) wifi:Init static rx buffer num: 10[0m
+[0;32mI (563) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (573) wifi_init: rx ba win: 6[0m
+[0;32mI (573) wifi_init: accept mbox: 6[0m
+[0;32mI (573) wifi_init: tcpip mbox: 32[0m
+[0;32mI (583) wifi_init: udp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp mbox: 6[0m
+[0;32mI (583) wifi_init: tcp tx win: 5760[0m
+[0;32mI (583) wifi_init: tcp rx win: 5760[0m
+[0;32mI (593) wifi_init: tcp mss: 1440[0m
+[0;32mI (593) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (593) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (603) phy_init: phy_version 711,97bcf0a2,Aug 25 2025,19:04:10[0m
+[0;32mI (653) wifi:mode : sta (ac:a7:04:e2:ec:4c)[0m
+[0;32mI (653) wifi:enable tsf[0m
+[0;32mI (653) NETWORK_TASK: Esperando conexion WiFi a 'DIGIFIBRA-kd5t'...[0m
+[0;32mI (663) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (673) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (683) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (713) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (713) wifi:security: WPA2-PSK, phy: bgn, rssi: -37, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (793) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4053) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4053) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4053) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4063) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4063) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4163) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4163) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4203) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4263) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4263) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4283) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4363) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4363) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4363) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4363) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163976 bytes | Min Heap Libre Histórico: 160268 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (713) wifi:security: WPA2-PSK, phy: bgn, rssi: -36, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (723) wifi:pm start, type: 1[0m
+
+[0;32mI (723) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (733) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (743) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (753) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4093) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4093) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4093) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4103) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4103) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4203) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4203) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4243) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4303) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4303) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4343) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4403) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4403) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4403) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4403) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163976 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (16873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (17903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19953) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (20973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (22003) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (23033) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (25083) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25623) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (25623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27133) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (29183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (30213) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30653) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (30653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (31233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (32263) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33283) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (34313) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (35333) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35683) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35683) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (35683) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35683) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (35703) MAIN_DEP: ----------------------------------[0m
+[0;32mI (36363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (37393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39443) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (40463) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (40713) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40713) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (40713) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40713) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (40733) MAIN_DEP: ----------------------------------[0m
+[0;32mI (41493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43543) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (44573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (45743) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45743) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (45743) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45743) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (45763) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47653) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48673) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (49703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (50723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (50773) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50773) MAIN_DEP: Heap Libre: 162156 bytes | Min Heap Libre Histórico: 160232 bytes[0m
+[0;32mI (50773) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50773) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (50793) MAIN_DEP: ----------------------------------[0m
+[0;32mI (51753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (52783) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (54833) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55803) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55803) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (55803) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55803) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (55823) MAIN_DEP: ----------------------------------[0m
+[0;32mI (55853) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (56883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (57913) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58933) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (59963) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (60833) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (60833) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (60833) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (60833) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (60853) MAIN_DEP: ----------------------------------[0m
+[0;32mI (60983) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (62013) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (63043) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (64063) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (65093) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (65863) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (65863) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (65863) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (65863) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (65883) MAIN_DEP: ----------------------------------[0m
+[0;32mI (66113) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (67143) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (68173) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (69193) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (70223) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (70893) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (70893) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (70893) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (70893) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (70913) MAIN_DEP: ----------------------------------[0m
+[0;32mI (71243) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (72273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (73303) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (74323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (75353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (75923) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (75923) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (75923) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (75923) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (75943) MAIN_DEP: ----------------------------------[0m
+[0;32mI (76373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (77403) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (78423) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (79453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (80483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (80953) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (80953) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (80953) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (80953) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (80973) MAIN_DEP: ----------------------------------[0m
+[0;32mI (81503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (82533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (83553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (84583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (85613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (85983) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (85983) MAIN_DEP: Heap Libre: 163752 bytes | Min Heap Libre Histórico: 158356 bytes[0m
+[0;32mI (85983) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (85983) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (86003) MAIN_DEP: ----------------------------------[0m
+[0;32mI (86633) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (87663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (88683) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (258) esp_image: segment 3: paddr=000f85ec vaddr=3fca06c4 sizeI (733) wifi:connected with DIGIFIBRA-kd5t, aid = 18, channel 2, BW20, bssid = 3c:a7:ae:92:e7:cc[0m
+[0;32mI (743) wifi:security: WPA2-PSK, phy: bgn, rssi: -33, cipher(pairwise:0x3, group:0x3), pmf:0[0m
+[0;32mI (743) wifi:pm start, type: 1[0m
+
+[0;32mI (743) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (753) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (763) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (773) wifi:<ba-add>idx:0 (ifx:0, 3c:a7:ae:92:e7:cc), tid:0, ssn:2, winSize:64[0m
+[0;32mI (4213) esp_netif_handlers: sta ip: 192.168.1.139, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4213) NETWORK_TASK: WiFi conectado. IP asignada: 192.168.1.139[0m
+[0;32mI (4213) MAIN_DEP: Wi-Fi CONECTADO con éxito. Iniciando tareas en modo ONLINE.[0m
+[0;32mI (4223) MAIN_DEP: Iniciando TelemetryTask...[0m
+[0;32mI (4223) TELEMETRY_TASK: Inicializando Telemetry Task en Core 0[0m
+[0;32mI (4323) MAIN_DEP: Iniciando SdTask...[0m
+[0;32mI (4323) SD_TASK: Inicializando SD Task en Core 0[0m
+[0;32mI (4363) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[0;32mI (4423) MAIN_DEP: Iniciando NetworkTask...[0m
+[0;32mI (4423) NETWORK_TASK: Inicializando Network Task en Core 0 (WiFi: CONECTADO)[0m
+[0;32mI (4463) NETWORK_TASK: MQTT Conectado[0m
+[0;32mI (4523) MAIN_DEP: Iniciando SensorTask (Tiempo Crítico)...[0m
+[0;32mI (4523) MAIN_DEP: Secuencia de arranque completada.[0m
+[0;32mI (4523) SENSOR_TASK: Inicializando Sensor Task en Core 1[0m
+[0;32mI (4523) main_task: Returned from app_main()[0m
+[0;33mW (5503) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (5503) MAIN_DEP: Heap Libre: 163988 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (5503) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (5503) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (5513) MAIN_DEP: Telemetría -> Freq. Dominante: 0.00 Hz | Amplitud: 0.00 dB | Altitud: 0.00 m[0m
+[0;33mW (5523) MAIN_DEP: ----------------------------------[0m
+[0;32mI (5713) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (6733) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (7763) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (8793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (9813) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (10533) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (10533) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (10533) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (10533) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (10543) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (10553) MAIN_DEP: ----------------------------------[0m
+[0;32mI (10843) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (11863) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (12893) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (13923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (14943) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (15563) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (15563) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (15563) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (15563) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (15573) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (15583) MAIN_DEP: ----------------------------------[0m
+[0;32mI (15973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (16993) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (18023) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (19053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (20073) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (20593) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (20593) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (20593) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (20593) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (20603) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (20613) MAIN_DEP: ----------------------------------[0m
+[0;32mI (21103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (22123) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (23153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (24173) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (25203) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (25623) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (25623) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (25623) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (25623) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (25633) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (25643) MAIN_DEP: ----------------------------------[0m
+[0;32mI (26233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (27253) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (28283) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (29303) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (30333) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (30653) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (30653) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (30653) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (30653) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (30663) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (30673) MAIN_DEP: ----------------------------------[0m
+[0;32mI (31353) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (32383) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (33413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (34433) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (35463) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (35683) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (35683) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (35683) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (35683) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (35693) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (35703) MAIN_DEP: ----------------------------------[0m
+[0;32mI (36483) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (37513) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (38533) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (39563) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (40593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (40713) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (40713) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (40713) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (40713) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (40723) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (40733) MAIN_DEP: ----------------------------------[0m
+[0;32mI (41613) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (42643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (43663) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (44693) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (45723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (45743) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (45743) MAIN_DEP: Heap Libre: 162160 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (45743) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (45743) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (45753) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (45763) MAIN_DEP: ----------------------------------[0m
+[0;32mI (46743) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (47773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (48793) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (49823) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (50773) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (50773) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (50773) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (50773) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (50783) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (50793) MAIN_DEP: ----------------------------------[0m
+[0;32mI (50853) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (51873) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (52903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (53923) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (54953) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (55803) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (55803) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (55803) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (55803) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (55813) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (55823) MAIN_DEP: ----------------------------------[0m
+[0;32mI (55973) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (57003) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (58033) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (59053) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (60083) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (60833) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (60833) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (60833) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (60833) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (60843) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (60853) MAIN_DEP: ----------------------------------[0m
+[0;32mI (61103) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (62133) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (63153) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (64183) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (65213) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (65863) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (65863) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (65863) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (65863) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (65873) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (65883) MAIN_DEP: ----------------------------------[0m
+[0;32mI (66233) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (67263) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (68283) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (69313) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (70343) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (70893) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (70893) MAIN_DEP: Heap Libre: 163720 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (70893) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (70893) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (70903) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (70913) MAIN_DEP: ----------------------------------[0m
+[0;32mI (71363) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (72393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (73413) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (74443) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (75463) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (75923) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (75923) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (75923) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (75923) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (75933) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (75943) MAIN_DEP: ----------------------------------[0m
+[0;32mI (76493) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (77523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (78543) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (79573) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (80593) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (80953) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (80953) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (80953) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (80953) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (80963) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (80973) MAIN_DEP: ----------------------------------[0m
+[0;32mI (81623) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (82643) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (83673) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (84703) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (85723) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (85983) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (85983) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 160228 bytes[0m
+[0;32mI (85983) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (85983) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (85993) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (86003) MAIN_DEP: ----------------------------------[0m
+[0;32mI (86753) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (87773) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (88803) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (89833) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (90853) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (91013) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (91013) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (91013) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (91013) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (91023) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (91023) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (91033) MAIN_DEP: ----------------------------------[0m
+[0;32mI (91883) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (92903) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (93933) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (94963) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (95983) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (96043) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (96043) MAIN_DEP: Heap Libre: 162160 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (96043) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (96043) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (96053) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (96053) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (96063) MAIN_DEP: ----------------------------------[0m
+[0;32mI (97013) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (98033) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (99063) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (100093) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (101073) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (101073) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (101073) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (101073) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (101083) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (101083) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (101093) MAIN_DEP: ----------------------------------[0m
+[0;32mI (101113) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (102143) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (103163) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (104193) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (105213) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (106103) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (106103) MAIN_DEP: Heap Libre: 163756 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (106103) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (106103) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (106113) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (106113) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (106123) MAIN_DEP: ----------------------------------[0m
+[0;32mI (106243) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (107273) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (108293) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (109323) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (110343) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (111133) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (111133) MAIN_DEP: Heap Libre: 163544 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (111133) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (111133) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (111143) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (111143) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (111153) MAIN_DEP: ----------------------------------[0m
+[0;32mI (111373) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (112393) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (113423) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (114453) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (115473) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;33mW (116163) MAIN_DEP: --- ESTADO DEL SISTEMA (DEBUG) ---[0m
+[0;32mI (116163) MAIN_DEP: Heap Libre: 163580 bytes | Min Heap Libre Histórico: 158368 bytes[0m
+[0;32mI (116163) MAIN_DEP: Queue DataPool (Espacios Libres): 0 / 10[0m
+[0;32mI (116163) MAIN_DEP: Queue SD (Espacios Libres): 10 / 10[0m
+[0;32mI (116173) MAIN_DEP: Queue Network (Espacios Libres): 10 / 10[0m
+[0;32mI (116173) MAIN_DEP: Telemetría -> Freq. Dominante: 0.98 Hz | Amplitud: -100.00 dB | Altitud: 0.00 m[0m
+[0;33mW (116183) MAIN_DEP: ----------------------------------[0m
+[0;32mI (116503) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (117523) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (118553) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (119583) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m
+[0;32mI (120603) SENSOR_TASK: Dato Crudo Z: 0.00 m/s2 | Freq Dominante: 0.98 Hz | Amplitud: -100.00 dB[0m

@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+bool wifi_init_sta(void);
 void vNetworkTask(void *pvParameters);
 
 #ifdef __cplusplus
