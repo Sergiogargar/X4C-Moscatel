@@ -65,13 +65,15 @@ void vSdTask(void *pvParameters) {
             if (f != NULL) {
                 // Escritura binaria rápida del struct entero
                 fwrite(msg.data_ptr, sizeof(ProcessedVibrationData_t), 1, f);
-                // Forzar flush a SD ocasionalmente (reduce rendimiento, pero asegura persistencia)
+                // Forzar flush a SD ocasionalmente para asegurar persistencia
                 static int sync_counter = 0;
                 if (++sync_counter % 100 == 0) {
                     fflush(f);
                     fsync(fileno(f));
                 }
             }
+            // Liberar referencia al slot de pool (pool_release devuelve si ref_count == 0)
+            pool_release(&msg.data_ptr);
         }
     }
 }

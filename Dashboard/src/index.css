@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fuentes técnicas desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Override de Leaflet para modo oscuro */
+.leaflet-container {
+  background: #0a0e17;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-radius: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.leaflet-popup-tip {
+  background: #1e293b;
+}
+
+/* Animación de pulso para puntos críticos */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}

@@ -8,7 +8,11 @@
 #include "sd_task.h"
 #include "network_task.h"
 #include "esp_log.h"
+#include "nvs_flash.h"
+#include "esp_netif.h"
+#include "esp_event.h"
 #include <stdlib.h>
+#include <string.h>
 
 static const char *TAG = "MAIN";
 
@@ -25,14 +29,30 @@ QueueHandle_t xVibrationDataPool;
 extern "C" void app_main() {
     ESP_LOGI(TAG, "Iniciando Gemelo Digital de Tren (Vibraciones)");
 
-    // 1. Inicializar Primitivas de Sincronización
+    // 1. Inicializar NVS (requerido para WiFi)
+    esp_err_t nvs_ret = nvs_flash_init();
+    if (nvs_ret == ESP_ERR_NVS_NO_FREE_PAGES || nvs_ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
+        ESP_ERROR_CHECK(nvs_flash_erase());
+        nvs_ret = nvs_flash_init();
+    }
+    ESP_ERROR_CHECK(nvs_ret);
+
+    // 2. Inicializar stack TCP/IP y bucle de eventos (requerido para WiFi)
+    ESP_ERROR_CHECK(esp_netif_init());
+    ESP_ERROR_CHECK(esp_event_loop_create_default());
+
+    // 3. Conectar WiFi antes de crear las tareas
+    bool wifi_ok = wifi_init_sta();
+    if (!wifi_ok) {
+        ESP_LOGW(TAG, "Sin conexion WiFi: el sistema arranca en modo offline (solo SD).");
+    }
+
+    // 4. Inicializar Primitivas de Sincronización
+    memset(&currentTelemetry, 0, sizeof(currentTelemetry));
     xTelemetryMutex = xSemaphoreCreateMutex();
-    
-    // Cola para el Data Pool (Almacena punteros a memoria pre-alojada)
+
     xVibrationDataPool = xQueueCreate(MEMORY_POOL_SIZE, sizeof(ProcessedVibrationData_t*));
-    
-    // Colas de paso de mensajes (Almacenan struct VibrationMessage_t)
-    xSdQueue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(VibrationMessage_t));
+    xSdQueue      = xQueueCreate(MEMORY_POOL_SIZE, sizeof(VibrationMessage_t));
     xNetworkQueue = xQueueCreate(MEMORY_POOL_SIZE, sizeof(VibrationMessage_t));
 
     if (xVibrationDataPool == NULL || xSdQueue == NULL || xNetworkQueue == NULL || xTelemetryMutex == NULL) {
@@ -40,11 +60,11 @@ extern "C" void app_main() {
         return;
     }
 
-    // 2. Pre-alojar memoria para el Memory Pool
+    // 5. Pre-alojar memoria para el Memory Pool
     for (int i = 0; i < MEMORY_POOL_SIZE; i++) {
-        // Alocar en memoria interna o PSRAM
         ProcessedVibrationData_t *pData = (ProcessedVibrationData_t *)malloc(sizeof(ProcessedVibrationData_t));
         if (pData != NULL) {
+            pData->ref_count = 0;
             xQueueSend(xVibrationDataPool, &pData, portMAX_DELAY);
         } else {
             ESP_LOGE(TAG, "Fallo al alocar memoria para el pool");
@@ -52,49 +72,17 @@ extern "C" void app_main() {
         }
     }
 
-    // 3. Crear Tareas y asignarlas a los Cores adecuados (Core Pinning)
-    
-    // Core 0: Tareas de Red, I/O, y Telemetría Asíncrona
-    xTaskCreatePinnedToCore(
-        vTelemetryTask,
-        "TelemetryTask",
-        4096,
-        NULL,
-        1,      // Prioridad baja
-        NULL,
-        0       // Core 0
-    );
+    // 6. Crear Tareas y asignarlas a los Cores adecuados (Core Pinning)
 
-    xTaskCreatePinnedToCore(
-        vSdTask,
-        "SdTask",
-        4096,
-        NULL,
-        2,      // Prioridad media
-        NULL,
-        0       // Core 0
-    );
+    // Core 0: Red, I/O, Telemetría
+    xTaskCreatePinnedToCore(vTelemetryTask, "TelemetryTask", 4096, NULL, 1, NULL, 0);
+    xTaskCreatePinnedToCore(vSdTask,        "SdTask",        4096, NULL, 2, NULL, 0);
 
-    xTaskCreatePinnedToCore(
-        vNetworkTask,
-        "NetworkTask",
-        8192,
-        NULL,
-        3,      // Prioridad alta en Core 0
-        NULL,
-        0       // Core 0
-    );
+    // wifi_ok se pasa a NetworkTask para que sepa si MQTT está disponible
+    xTaskCreatePinnedToCore(vNetworkTask, "NetworkTask", 8192, (void*)(uintptr_t)wifi_ok, 3, NULL, 0);
 
-    // Core 1: Tareas de Tiempo Crítico (DMA / Procesamiento DSP FFT)
-    xTaskCreatePinnedToCore(
-        vSensorTask,
-        "SensorTask",
-        8192,
-        NULL,
-        configMAX_PRIORITIES - 1, // Prioridad máxima (Tiempo Crítico)
-        NULL,
-        1                         // Core 1
-    );
+    // Core 1: Sensor + FFT (tiempo crítico)
+    xTaskCreatePinnedToCore(vSensorTask, "SensorTask", 8192, NULL, configMAX_PRIORITIES - 1, NULL, 1);
 
     ESP_LOGI(TAG, "Todas las tareas iniciadas correctamente.");
 }

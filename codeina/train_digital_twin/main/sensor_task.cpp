@@ -44,6 +44,25 @@ static esp_err_t mpu6050_read_reg(uint8_t reg, uint8_t *data, size_t len) {
     return err;
 }
 
+// Escanea el bus I2C y loguea todas las direcciones que respondan.
+// Útil para diagnosticar si el sensor está conectado y en qué dirección.
+static void i2c_scan() {
+    ESP_LOGW(TAG, "=== ESCANER I2C (SDA=GPIO%d, SCL=GPIO%d) ===", I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO);
+    int found = 0;
+    for (uint8_t addr = 0x08; addr < 0x78; addr++) {
+        uint8_t buf;
+        esp_err_t ret = i2c_master_write_read_device(I2C_MASTER_NUM, addr, &buf, 0, &buf, 0, pdMS_TO_TICKS(10));
+        if (ret == ESP_OK) {
+            ESP_LOGW(TAG, "  Dispositivo encontrado en 0x%02X", addr);
+            found++;
+        }
+    }
+    if (found == 0) {
+        ESP_LOGE(TAG, "  NINGUN dispositivo I2C encontrado. Revisa el cableado SDA/SCL.");
+    }
+    ESP_LOGW(TAG, "=== FIN ESCANER I2C (%d dispositivos) ===", found);
+}
+
 static void init_imu_i2c() {
     i2c_config_t conf;
     memset(&conf, 0, sizeof(conf));
@@ -55,6 +74,9 @@ static void init_imu_i2c() {
     conf.master.clk_speed = 400000;
     i2c_param_config(I2C_MASTER_NUM, &conf);
     i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
+
+    // Escanear para encontrar el sensor antes de inicializarlo
+    i2c_scan();
 
     ESP_LOGI(TAG, "Iniciando secuencia de rescate para clon MPU6050...");
 
@@ -73,7 +95,24 @@ static void init_imu_i2c() {
 
     uint8_t who = 0;
     mpu6050_read_reg(0x75, &who, 1);
-    ESP_LOGI(TAG, "Clon MPU6050 Inicializado. WHO_AM_I = 0x%02X", who);
+    ESP_LOGI(TAG, "WHO_AM_I = 0x%02X (esperado: 0x68 o 0x98 para MPU6050/ICM-20948)", who);
+
+    // Si el sensor está en 0x69 (AD0 a VCC), cambiar dirección automáticamente
+    if (who == 0x00) {
+        ESP_LOGW(TAG, "Sensor no responde en 0x68, probando 0x69 (AD0 alto)...");
+        s_mpu6050_addr = 0x69;
+        mpu6050_read_reg(0x75, &who, 1);
+        if (who != 0x00) {
+            ESP_LOGW(TAG, "Sensor encontrado en 0x69. WHO_AM_I = 0x%02X", who);
+            // Re-inicializar en la nueva dirección
+            mpu6050_write_reg(0x6B, 0x01);
+            vTaskDelay(pdMS_TO_TICKS(50));
+            mpu6050_write_reg(0x6C, 0x00);
+            vTaskDelay(pdMS_TO_TICKS(20));
+        } else {
+            ESP_LOGE(TAG, "Sensor NO encontrado ni en 0x68 ni en 0x69. Revisa el cableado.");
+        }
+    }
 }
 
 static bool IRAM_ATTR timer_isr_handler(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_ctx) {
@@ -218,9 +257,20 @@ void vSensorTask(void *pvParameters) {
                 VibrationMessage_t msg;
                 msg.data_ptr = pData;
 
-                if (xQueueSend(xSdQueue, &msg, 0) != pdTRUE) {}
-                if (xQueueSend(xNetworkQueue, &msg, 0) != pdTRUE) {
-                    xQueueSend(xVibrationDataPool, &pData, 0);
+                // ref_count debe estar en 2 antes de cualquier send, para que
+                // los consumidores no liberen el slot prematuramente si procesan
+                // más rápido de lo que este core termina de ajustar el contador.
+                pData->ref_count = 2;
+
+                bool sd_sent  = (xQueueSend(xSdQueue,      &msg, 0) == pdTRUE);
+                bool net_sent = (xQueueSend(xNetworkQueue, &msg, 0) == pdTRUE);
+
+                // Compensar referencias de consumidores que no recibieron el mensaje
+                if (!sd_sent)  pool_release(&pData);
+                if (!net_sent) pool_release(&pData);
+
+                if (!sd_sent && !net_sent) {
+                    ESP_LOGW(TAG, "Ambas colas llenas, trama descartada");
                 }
             } else {
                 ESP_LOGW(TAG, "Data pool vacio, perdiendo trama");

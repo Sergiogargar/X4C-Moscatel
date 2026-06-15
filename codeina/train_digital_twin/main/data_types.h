@@ -29,8 +29,9 @@ typedef struct {
 
 // Estructura con datos listos para enviar a SD y Red
 typedef struct {
-    TelemetryData_t telemetry;       // Estado del tren en el momento del muestreo
+    TelemetryData_t telemetry;          // Estado del tren en el momento del muestreo
     float fft_spectrum[FFT_RESOLUTION]; // Espectro de frecuencias (magnitudes)
+    uint8_t ref_count;                  // Número de consumidores que aún retienen este slot
 } ProcessedVibrationData_t;
 
 // Elemento de cola. Usamos puntero para evitar copiar todo el array grande (Zero-Copy)
@@ -50,8 +51,16 @@ extern TelemetryData_t currentTelemetry;
 extern QueueHandle_t xSdQueue;
 extern QueueHandle_t xNetworkQueue;
 
-// Pool de memoria para evitar mallocs y fragmentación (Memory Pool para ProcessedVibrationData_t)
-// Se gestionarán en sensor_task
+// Pool de memoria para evitar mallocs y fragmentación
 extern QueueHandle_t xVibrationDataPool;
+
+// Libera una referencia del slot de pool. Cuando ref_count llega a 0, devuelve el slot.
+// Usa GCC atomics (__atomic_sub_fetch) — seguros en SMP sin necesitar spinlock externo.
+static inline void pool_release(ProcessedVibrationData_t **ppData) {
+    uint8_t remaining = __atomic_sub_fetch(&(*ppData)->ref_count, 1, __ATOMIC_ACQ_REL);
+    if (remaining == 0) {
+        xQueueSend(xVibrationDataPool, ppData, 0);
+    }
+}
 
 #endif // DATA_TYPES_H

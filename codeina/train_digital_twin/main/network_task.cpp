@@ -13,9 +13,9 @@
 static const char *TAG = "NETWORK_TASK";
 
 // ─── CONFIGURAR ANTES DE FLASHEAR ────────────────────────────────
-#define WIFI_SSID       "DIGIFIBRA-kd5t"    // <-- pon tu SSID real aqui
-#define WIFI_PASS       "N9G6k5GuFSUK"      // <-- pon tu contrasena real aqui
-#define MQTT_BROKER_URI "mqtt://192.168.1.128:1883" // IP del host donde corre docker-compose
+#define WIFI_SSID       "iPhone de Mibu"    // <-- pon tu SSID real aqui
+#define WIFI_PASS       "xdxdxdxd"      // <-- pon tu contrasena real aqui
+#define MQTT_BROKER_URI "mqtt://172.20.10.3:1883" // IP del host donde corre docker-compose
 #define MQTT_TOPIC      "train/telemetry/vibrations"
 #define TRAIN_ID        "T-101"  // Identificador unico de esta unidad (T-101, T-102, ...)
 // ─────────────────────────────────────────────────────────────────
@@ -145,8 +145,8 @@ void vNetworkTask(void *pvParameters) {
         while (1) {
             if (xQueueReceive(xNetworkQueue, &msg, portMAX_DELAY) == pdTRUE) {
                 ProcessedVibrationData_t *data = msg.data_ptr;
-                // Devolver la memoria del struct al pool para reutilizacion sin publicar
-                xQueueSend(xVibrationDataPool, &data, 0);
+                // En modo offline solo liberamos la referencia al pool
+                pool_release(&data);
             }
         }
         return;
@@ -159,19 +159,20 @@ void vNetworkTask(void *pvParameters) {
         if (xQueueReceive(xNetworkQueue, &msg, portMAX_DELAY) == pdTRUE) {
             ProcessedVibrationData_t *data = msg.data_ptr;
 
-            // Descartar puntos sin fix GPS: coordenadas (0,0) no son utiles en el dashboard
-            /*if (!data->telemetry.gps_valid) {
-                ESP_LOGW(TAG, "GPS sin fix, descartando publicacion MQTT");
-                xQueueSend(xVibrationDataPool, &data, 0);
-                continue;
-            }*/
+            // Sin fix GPS: usar coordenadas de prueba (Jerez) para poder ver datos en el dashboard
+            // en interior. En producción con GPS exterior esto se rellena con datos reales.
+            double pub_lat = data->telemetry.gps_valid ? data->telemetry.latitude  : 36.6852;
+            double pub_lon = data->telemetry.gps_valid ? data->telemetry.longitude : -6.1265;
+            if (!data->telemetry.gps_valid) {
+                ESP_LOGW(TAG, "GPS sin fix, publicando con coordenadas de prueba (Jerez)");
+            }
 
             if (s_mqtt_connected) {
                 // Construir JSON con los campos que espera el dashboard
                 cJSON *root = cJSON_CreateObject();
                 cJSON_AddNumberToObject(root, "timestamp",        (double)data->telemetry.timestamp_ms);
-                cJSON_AddNumberToObject(root, "lat",              data->telemetry.latitude);
-                cJSON_AddNumberToObject(root, "lon",              data->telemetry.longitude);
+                cJSON_AddNumberToObject(root, "lat",              pub_lat);
+                cJSON_AddNumberToObject(root, "lon",              pub_lon);
                 cJSON_AddNumberToObject(root, "alt",              data->telemetry.altitude);
                 cJSON_AddNumberToObject(root, "accel_z",          data->telemetry.accel_z);
                 cJSON_AddNumberToObject(root, "dominant_freq_hz", data->telemetry.dominant_freq_hz);
@@ -187,8 +188,8 @@ void vNetworkTask(void *pvParameters) {
                 cJSON_Delete(root);
             }
 
-            // Devolver la memoria del struct al pool para reutilizacion
-            xQueueSend(xVibrationDataPool, &data, 0);
+            // Liberar referencia al slot de pool
+            pool_release(&data);
         }
     }
 }

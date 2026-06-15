@@ -629,3 +629,5 @@
 1779634307: New connection from 172.18.0.1:49468 on port 1883.
 1779634307: New client connected from 172.18.0.1:49468 as ESP32_e2EC4C (p4, c1, k120).
 1779634470: Client ESP32_e2EC4C [172.18.0.1:49468] disconnected: connection closed by client.
+1781516145: New connection from 172.18.0.4:51548 on port 1883.
+1781516145: New client connected from 172.18.0.4:51548 as Telegraf-Consumer-Xz0b7 (p4, c1, k60).

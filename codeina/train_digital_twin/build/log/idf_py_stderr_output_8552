@@ -1,9 +1,0 @@
-Command: cmake -G Ninja -B C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=False C:\Users\sergi\Desktop\X4C Moscatel\codeina\train_digital_twin
-Configuration Report               
-+---------------------------------+
-|  Parser Version: 1              |
-|  Verbosity: default             |
-|  Defaults policy: sdkconfig     |
-|  Status: Finished successfully  |
-|                                 |
-+---------------------------------+
