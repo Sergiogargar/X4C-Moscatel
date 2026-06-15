@@ -44,23 +44,54 @@ static esp_err_t mpu6050_read_reg(uint8_t reg, uint8_t *data, size_t len) {
     return err;
 }
 
-// Escanea el bus I2C y loguea todas las direcciones que respondan.
-// Útil para diagnosticar si el sensor está conectado y en qué dirección.
+// Escanea el bus I2C enviando solo el byte de dirección (write de 1 byte a reg 0x00).
+// El driver legacy de ESP-IDF no acepta read_size=0, por eso se hace write puro.
+// Si el dispositivo ACKa → está presente. Si NACKa → ESP_ERR_TIMEOUT o ESP_FAIL.
 static void i2c_scan() {
     ESP_LOGW(TAG, "=== ESCANER I2C (SDA=GPIO%d, SCL=GPIO%d) ===", I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO);
     int found = 0;
     for (uint8_t addr = 0x08; addr < 0x78; addr++) {
-        uint8_t buf;
-        esp_err_t ret = i2c_master_write_read_device(I2C_MASTER_NUM, addr, &buf, 0, &buf, 0, pdMS_TO_TICKS(10));
+        uint8_t probe = 0x00; // pedimos registro 0x00 sin leer nada después
+        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (addr << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, probe, true);
+        i2c_master_stop(cmd);
+        esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, cmd, pdMS_TO_TICKS(10));
+        i2c_cmd_link_delete(cmd);
         if (ret == ESP_OK) {
             ESP_LOGW(TAG, "  Dispositivo encontrado en 0x%02X", addr);
             found++;
         }
     }
     if (found == 0) {
-        ESP_LOGE(TAG, "  NINGUN dispositivo I2C encontrado. Revisa el cableado SDA/SCL.");
+        ESP_LOGE(TAG, "  NINGUN dispositivo I2C encontrado. Revisa cableado SDA(GPIO%d)/SCL(GPIO%d) y VCC(3.3V).",
+                 I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO);
     }
     ESP_LOGW(TAG, "=== FIN ESCANER I2C (%d dispositivos) ===", found);
+}
+
+static void mpu6050_configure(void) {
+    // Salir del modo sleep sin DEVICE_RESET (más seguro para clones)
+    // 0x00 = oscilador interno, sleep=0, todos los sistemas activos
+    mpu6050_write_reg(0x6B, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(50));
+
+    // Deshabilitar FIFO y DMP (User Control)
+    mpu6050_write_reg(0x6A, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(10));
+
+    // Rango acelerómetro: ±2g → divisor 16384 LSB/g
+    mpu6050_write_reg(0x1C, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(10));
+
+    // Rango giroscopio: ±250 °/s → divisor 131 LSB/°/s
+    mpu6050_write_reg(0x1B, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(10));
+
+    // Habilitar todos los ejes (PWR_MGMT_2 = 0x00)
+    mpu6050_write_reg(0x6C, 0x00);
+    vTaskDelay(pdMS_TO_TICKS(10));
 }
 
 static void init_imu_i2c() {
@@ -75,43 +106,49 @@ static void init_imu_i2c() {
     i2c_param_config(I2C_MASTER_NUM, &conf);
     i2c_driver_install(I2C_MASTER_NUM, conf.mode, 0, 0, 0);
 
-    // Escanear para encontrar el sensor antes de inicializarlo
     i2c_scan();
 
-    ESP_LOGI(TAG, "Iniciando secuencia de rescate para clon MPU6050...");
+    ESP_LOGI(TAG, "Iniciando inicialización IMU...");
 
-    mpu6050_write_reg(0x68, 0x00);
-    vTaskDelay(pdMS_TO_TICKS(20));
-
-    mpu6050_write_reg(0x6A, 0x00);
-    vTaskDelay(pdMS_TO_TICKS(20));
-
-    // Usar reloj PLL X-Axis (0x01) en lugar de oscilador interno, por si el interno está muerto
-    mpu6050_write_reg(0x6B, 0x01);
-    vTaskDelay(pdMS_TO_TICKS(50));
-
-    mpu6050_write_reg(0x6C, 0x00);
-    vTaskDelay(pdMS_TO_TICKS(20));
-
+    // Configurar en dirección por defecto y leer WHO_AM_I
+    mpu6050_configure();
     uint8_t who = 0;
     mpu6050_read_reg(0x75, &who, 1);
-    ESP_LOGI(TAG, "WHO_AM_I = 0x%02X (esperado: 0x68 o 0x98 para MPU6050/ICM-20948)", who);
+    ESP_LOGW(TAG, "WHO_AM_I en 0x%02X = 0x%02X (MPU6050=0x68/0x70, ICM-20948=0xEA)", s_mpu6050_addr, who);
 
-    // Si el sensor está en 0x69 (AD0 a VCC), cambiar dirección automáticamente
+    // Si no hay respuesta útil, probar en 0x69 (AD0=VCC)
     if (who == 0x00) {
-        ESP_LOGW(TAG, "Sensor no responde en 0x68, probando 0x69 (AD0 alto)...");
+        ESP_LOGW(TAG, "Sin respuesta en 0x68, probando 0x69...");
         s_mpu6050_addr = 0x69;
+        mpu6050_configure();
         mpu6050_read_reg(0x75, &who, 1);
-        if (who != 0x00) {
-            ESP_LOGW(TAG, "Sensor encontrado en 0x69. WHO_AM_I = 0x%02X", who);
-            // Re-inicializar en la nueva dirección
-            mpu6050_write_reg(0x6B, 0x01);
-            vTaskDelay(pdMS_TO_TICKS(50));
-            mpu6050_write_reg(0x6C, 0x00);
-            vTaskDelay(pdMS_TO_TICKS(20));
-        } else {
-            ESP_LOGE(TAG, "Sensor NO encontrado ni en 0x68 ni en 0x69. Revisa el cableado.");
+        ESP_LOGW(TAG, "WHO_AM_I en 0x69 = 0x%02X", who);
+        if (who == 0x00) {
+            s_mpu6050_addr = 0x68; // restaurar por defecto
+            ESP_LOGE(TAG, "Sensor IMU NO encontrado en 0x68 ni 0x69. Revisa SDA/SCL.");
         }
+    }
+
+    ESP_LOGI(TAG, "IMU listo en dirección 0x%02X", s_mpu6050_addr);
+
+    // Dump de registros clave para diagnóstico de chip desconocido
+    uint8_t regs[8];
+    uint8_t start_reg = 0x6B;
+    if (mpu6050_read_reg(start_reg, regs, 8) == ESP_OK) {
+        ESP_LOGW(TAG, "REG DUMP 0x6B-0x72: %02X %02X %02X %02X %02X %02X %02X %02X",
+                 regs[0], regs[1], regs[2], regs[3], regs[4], regs[5], regs[6], regs[7]);
+    }
+    uint8_t accel_regs[14];
+    if (mpu6050_read_reg(0x3B, accel_regs, 14) == ESP_OK) {
+        ESP_LOGW(TAG, "REG DUMP 0x3B-0x48 (accel/temp/gyro raw): "
+                 "%02X%02X %02X%02X %02X%02X | %02X%02X | %02X%02X %02X%02X %02X%02X",
+                 accel_regs[0], accel_regs[1],
+                 accel_regs[2], accel_regs[3],
+                 accel_regs[4], accel_regs[5],
+                 accel_regs[6], accel_regs[7],
+                 accel_regs[8], accel_regs[9],
+                 accel_regs[10], accel_regs[11],
+                 accel_regs[12], accel_regs[13]);
     }
 }
 
@@ -164,41 +201,41 @@ void vSensorTask(void *pvParameters) {
         ulTaskNotifyTake(pdTRUE, pdMS_TO_TICKS(10));
 
         uint8_t sensor_data[14];
-        if (mpu6050_read_reg(MPU6050_ACCEL_XOUT_H, sensor_data, 14) == ESP_OK) {
-            
-            int16_t raw_ax = (sensor_data[0] << 8) | sensor_data[1];
-            int16_t raw_ay = (sensor_data[2] << 8) | sensor_data[3];
-            int16_t raw_az = (sensor_data[4] << 8) | sensor_data[5];
-            
-            int16_t raw_temp = (sensor_data[6] << 8) | sensor_data[7];
+        memset(sensor_data, 0, sizeof(sensor_data));
+        bool read_ok = (mpu6050_read_reg(MPU6050_ACCEL_XOUT_H, sensor_data, 14) == ESP_OK);
 
-            int16_t raw_gx = (sensor_data[8] << 8) | sensor_data[9];
-            int16_t raw_gy = (sensor_data[10] << 8) | sensor_data[11];
-            int16_t raw_gz = (sensor_data[12] << 8) | sensor_data[13];
+        int16_t raw_ax   = (sensor_data[0] << 8) | sensor_data[1];
+        int16_t raw_ay   = (sensor_data[2] << 8) | sensor_data[3];
+        int16_t raw_az   = (sensor_data[4] << 8) | sensor_data[5];
+        int16_t raw_temp = (sensor_data[6] << 8) | sensor_data[7];
+        int16_t raw_gx   = (sensor_data[8] << 8) | sensor_data[9];
+        int16_t raw_gy   = (sensor_data[10] << 8) | sensor_data[11];
+        int16_t raw_gz   = (sensor_data[12] << 8) | sensor_data[13];
 
-            if (print_temp_counter++ % 1000 == 0) {
-                ESP_LOGW(TAG, "Hardware Test -> Temp Cruda: %d | Accel Z Crudo: %d", raw_temp, raw_az);
-            }
+        if (print_temp_counter++ % 1000 == 0) {
+            ESP_LOGW(TAG, "Hardware Test -> Temp Cruda: %d | Accel Z Crudo: %d | I2C: %s",
+                     raw_temp, raw_az, read_ok ? "OK" : "FALLO");
+        }
 
-            float ax = ((float)raw_ax / 16384.0f) * 9.81f;
-            float ay = ((float)raw_ay / 16384.0f) * 9.81f;
-            float az = ((float)raw_az / 16384.0f) * 9.81f;
+        float ax = ((float)raw_ax / 16384.0f) * 9.81f;
+        float ay = ((float)raw_ay / 16384.0f) * 9.81f;
+        float az = ((float)raw_az / 16384.0f) * 9.81f;
 
-            if (xSemaphoreTake(xTelemetryMutex, 0) == pdTRUE) {
-                currentTelemetry.accel_x = ax;
-                currentTelemetry.accel_y = ay;
-                currentTelemetry.accel_z = az;
-                currentTelemetry.gyro_x = (float)raw_gx / 131.0f;
-                currentTelemetry.gyro_y = (float)raw_gy / 131.0f;
-                currentTelemetry.gyro_z = (float)raw_gz / 131.0f;
-                xSemaphoreGive(xTelemetryMutex);
-            }
+        if (xSemaphoreTake(xTelemetryMutex, 0) == pdTRUE) {
+            currentTelemetry.accel_x = ax;
+            currentTelemetry.accel_y = ay;
+            currentTelemetry.accel_z = az;
+            currentTelemetry.gyro_x = (float)raw_gx / 131.0f;
+            currentTelemetry.gyro_y = (float)raw_gy / 131.0f;
+            currentTelemetry.gyro_z = (float)raw_gz / 131.0f;
+            xSemaphoreGive(xTelemetryMutex);
+        }
 
-            if (samples_collected < FFT_SAMPLES) {
-                fft_input[samples_collected * 2 + 0] = az; // Analizar vibración Z (eje vertical)
-                fft_input[samples_collected * 2 + 1] = 0;
-                samples_collected++;
-            }
+        // Acumular muestra siempre (con ceros si I2C falló) para no detener la FFT
+        if (samples_collected < FFT_SAMPLES) {
+            fft_input[samples_collected * 2 + 0] = az;
+            fft_input[samples_collected * 2 + 1] = 0;
+            samples_collected++;
         }
 
         if (samples_collected >= FFT_SAMPLES) {

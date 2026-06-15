@@ -33,25 +33,37 @@ static void init_gps_uart() {
 }
 
 static void parse_nmea(const char* buffer, TelemetryData_t* tel) {
-    const char* gpgga = strstr(buffer, "$GPGGA");
-    if (gpgga != NULL) {
-        float lat = 0.0, lon = 0.0, alt = 0.0;
-        char lat_dir = 0, lon_dir = 0;
-        int fix_quality = 0;
-        
-        // $GPGGA,hhmmss.ss,llll.ll,a,yyyyy.yy,a,x,xx,x.x,x.x,M,x.x,M,x.x,xxxx*hh
-        if (sscanf(gpgga, "$GPGGA,%*[^,],%f,%c,%f,%c,%d,%*[^,],%*[^,],%f", &lat, &lat_dir, &lon, &lon_dir, &fix_quality, &alt) >= 5) {
-            if (fix_quality > 0) {
-                tel->latitude = (int)(lat / 100) + fmod(lat, 100.0) / 60.0;
-                if (lat_dir == 'S') tel->latitude = -tel->latitude;
-                
-                tel->longitude = (int)(lon / 100) + fmod(lon, 100.0) / 60.0;
-                if (lon_dir == 'W') tel->longitude = -tel->longitude;
-                
-                tel->altitude = alt;
-                tel->gps_valid = true;
-                ESP_LOGI(TAG, "GPS FIJADO: Lat: %.6f, Lon: %.6f", tel->latitude, tel->longitude);
-            }
+    // Soporte para $GPGGA (GPS puro) y $GNGGA (GNSS multi-constelación)
+    const char* sentence = strstr(buffer, "GPGGA,");
+    if (!sentence) sentence = strstr(buffer, "GNGGA,");
+    if (sentence == NULL) {
+        if (strlen(buffer) > 5) {
+            ESP_LOGD(TAG, "NMEA sin sentencia GGA: %.40s", buffer);
+        }
+        return;
+    }
+
+    float lat = 0.0f, lon = 0.0f, alt = 0.0f;
+    char lat_dir = 0, lon_dir = 0;
+    int fix_quality = 0;
+
+    // Parsear desde el identificador: "xPGGA,time,lat,dir,lon,dir,quality,..."
+    // %*[^,] salta un campo hasta la coma
+    if (sscanf(sentence, "%*[^,],%*[^,],%f,%c,%f,%c,%d,%*[^,],%*[^,],%f",
+               &lat, &lat_dir, &lon, &lon_dir, &fix_quality, &alt) >= 5) {
+        if (fix_quality > 0) {
+            tel->latitude  = (int)(lat / 100) + fmod(lat, 100.0) / 60.0;
+            if (lat_dir == 'S') tel->latitude  = -tel->latitude;
+
+            tel->longitude = (int)(lon / 100) + fmod(lon, 100.0) / 60.0;
+            if (lon_dir == 'W') tel->longitude = -tel->longitude;
+
+            tel->altitude  = alt;
+            tel->gps_valid = true;
+            ESP_LOGI(TAG, "GPS FIJADO: Lat: %.6f, Lon: %.6f, Alt: %.1f m",
+                     tel->latitude, tel->longitude, tel->altitude);
+        } else {
+            ESP_LOGD(TAG, "GGA recibido sin fix (quality=%d)", fix_quality);
         }
     }
 }
@@ -71,7 +83,13 @@ void vTelemetryTask(void *pvParameters) {
 
         if (rxBytes > 0) {
             data[rxBytes] = 0;
+            ESP_LOGD(TAG, "UART GPS recibio %d bytes: %.80s", rxBytes, (char*)data);
             parse_nmea((char*)data, &new_telemetry);
+        } else {
+            static int no_data_count = 0;
+            if (++no_data_count % 20 == 0) {
+                ESP_LOGW(TAG, "GPS: sin datos UART tras %d ciclos (RXD=GPIO%d)", no_data_count, RXD_PIN);
+            }
         }
 
         if (xSemaphoreTake(xTelemetryMutex, portMAX_DELAY) == pdTRUE) {

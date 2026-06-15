@@ -28,6 +28,12 @@ services:
       - DOCKER_INFLUXDB_INIT_BUCKET=vibrations
       - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=my-super-secret-auth-token
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8086/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+      start_period: 30s
 
   # Telegraf: Puente MQTT -> InfluxDB
   telegraf:
@@ -36,8 +42,10 @@ services:
     volumes:
       - ./telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
     depends_on:
-      - mosquitto
-      - influxdb
+      mosquitto:
+        condition: service_started
+      influxdb:
+        condition: service_healthy
     restart: always
 
   # Visualización Grafana
@@ -52,5 +60,6 @@ services:
     volumes:
       - ./grafana/data:/var/lib/grafana
     depends_on:
-      - influxdb
+      influxdb:
+        condition: service_healthy
     restart: always

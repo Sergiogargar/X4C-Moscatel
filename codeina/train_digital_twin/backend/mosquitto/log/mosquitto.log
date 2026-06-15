@@ -631,3 +631,44 @@
 1779634470: Client ESP32_e2EC4C [172.18.0.1:49468] disconnected: connection closed by client.
 1781516145: New connection from 172.18.0.4:51548 on port 1883.
 1781516145: New client connected from 172.18.0.4:51548 as Telegraf-Consumer-Xz0b7 (p4, c1, k60).
+1781519137: New connection from 172.18.0.1:47896 on port 1883.
+1781519137: New client connected from 172.18.0.1:47896 as ESP32_e2EC4C (p4, c1, k120).
+1781519609: New connection from 172.18.0.1:60098 on port 1883.
+1781519609: Client ESP32_e2EC4C [172.18.0.1:47896] disconnected: session taken over.
+1781519609: New client connected from 172.18.0.1:60098 as ESP32_e2EC4C (p4, c1, k120).
+1781520506: Client Telegraf-Consumer-Xz0b7 [172.18.0.4:51548] disconnected.
+1781530271: New connection from 172.18.0.2:35598 on port 1883.
+1781530271: New client connected from 172.18.0.2:35598 as Telegraf-Consumer-GmIcv (p4, c1, k60).
+1781530271: New connection from 172.18.0.1:43462 on port 1883.
+1781530271: New client connected from 172.18.0.1:43462 as ESP32_e2EC4C (p4, c1, k120).
+1781530383: New connection from 172.18.0.1:40082 on port 1883.
+1781530383: Client ESP32_e2EC4C [172.18.0.1:43462] disconnected: session taken over.
+1781530383: New client connected from 172.18.0.1:40082 as ESP32_e2EC4C (p4, c1, k120).
+1781530980: Client ESP32_e2EC4C [172.18.0.1:40082] disconnected: connection closed by client.
+1781530988: New connection from 172.18.0.1:48028 on port 1883.
+1781530988: New client connected from 172.18.0.1:48028 as ESP32_e2EC4C (p4, c1, k120).
+1781531245: Client ESP32_e2EC4C [172.18.0.1:48028] disconnected: connection closed by client.
+1781531245: New connection from 172.18.0.1:59772 on port 1883.
+1781531245: New client connected from 172.18.0.1:59772 as ESP32_e2EC4C (p4, c1, k120).
+1781531503: New connection from 172.18.0.1:45722 on port 1883.
+1781531503: Client ESP32_e2EC4C [172.18.0.1:59772] disconnected: session taken over.
+1781531503: New client connected from 172.18.0.1:45722 as ESP32_e2EC4C (p4, c1, k120).
+1781531744: New connection from 172.18.0.1:44696 on port 1883.
+1781531744: Client ESP32_e2EC4C [172.18.0.1:45722] disconnected: session taken over.
+1781531744: New client connected from 172.18.0.1:44696 as ESP32_e2EC4C (p4, c1, k120).
+1781532017: Client Telegraf-Consumer-GmIcv [172.18.0.2:35598] disconnected.
+1781532020: New connection from 172.18.0.5:33208 on port 1883.
+1781532020: New client connected from 172.18.0.5:33208 as Telegraf-Consumer-TQW0w (p4, c1, k60).
+1781532027: New connection from 172.18.0.1:40258 on port 1883.
+1781532027: New client connected from 172.18.0.1:40258 as ESP32_e2EC4C (p4, c1, k120).
+1781532051: New connection from 172.18.0.1:42710 on port 1883.
+1781532051: Client ESP32_e2EC4C [172.18.0.1:40258] disconnected: session taken over.
+1781532051: New client connected from 172.18.0.1:42710 as ESP32_e2EC4C (p4, c1, k120).
+1781532502: New connection from 172.18.0.4:59864 on port 1883.
+1781532502: New client connected from 172.18.0.4:59864 as telegraf_train_monitor (p4, c1, k60).
+1781532516: New connection from 172.18.0.1:39926 on port 1883.
+1781532516: New client connected from 172.18.0.1:39926 as ESP32_e2EC4C (p4, c1, k120).
+1781532810: New connection from 172.18.0.1:32832 on port 1883.
+1781532810: Client ESP32_e2EC4C [172.18.0.1:39926] disconnected: session taken over.
+1781532810: New client connected from 172.18.0.1:32832 as ESP32_e2EC4C (p4, c1, k120).
+1781532828: Client telegraf_train_monitor [172.18.0.4:59864] disconnected.

@@ -115,13 +115,15 @@ function parseInfluxCSV(csv: string): Omit<GeoPoint, 'level'>[] {
 
 // ─── Fetch InfluxDB ───────────────────────────────────────────────
 async function fetchFromInflux(): Promise<GeoPoint[]> {
-  // Obtiene los últimos 2 h de mediciones, máximo 500 puntos
+  // Ordena DESCENDENTE y limita a 500 para que el punto más reciente
+  // siempre quede incluido en el resultado (el bug original usaba desc:false,
+  // devolviendo los 500 puntos MÁS ANTIGUOS → mostRecentTs = hace >2h → offline).
   const query = [
     `from(bucket: "${INFLUX_BUCKET}")`,
-    `  |> range(start: -2h)`,
+    `  |> range(start: -24h)`,
     `  |> filter(fn: (r) => r._measurement == "mqtt_consumer")`,
     `  |> pivot(rowKey:["_time"], columnKey: ["_field"], valueColumn: "_value")`,
-    `  |> sort(columns: ["_time"], desc: false)`,
+    `  |> sort(columns: ["_time"], desc: true)`,
     `  |> limit(n: 500)`,
   ].join('\n');
 
@@ -143,21 +145,21 @@ async function fetchFromInflux(): Promise<GeoPoint[]> {
     throw new Error(`InfluxDB ${res.status}: ${body.slice(0, 200)}`);
   }
 
-  const csv  = await res.text();
-  const raw  = parseInfluxCSV(csv);
-
-  if (raw.length === 0) throw new Error('InfluxDB no contiene datos aún');
-
+  const csv = await res.text();
+  const raw = parseInfluxCSV(csv);
+  // No lanzar si está vacío: InfluxDB puede estar conectado pero sin datos recientes.
+  // El caller marca dataSource='live' aunque sea vacío, para distinguir
+  // "ESP32 no ha enviado datos aún" de "InfluxDB no disponible".
   return enrichPoints(raw);
 }
 
 // ─── API pública ──────────────────────────────────────────────────
 
-/** Devuelve puntos GPS. Cae a mock si InfluxDB no está disponible. */
+/** Devuelve puntos GPS. Cae a mock solo si InfluxDB no está accesible. */
 export async function fetchGeoPoints(): Promise<GeoPoint[]> {
   try {
     const points = await fetchFromInflux();
-    _lastSource = 'live';
+    _lastSource = 'live';   // InfluxDB responde → siempre 'live', incluso si vacío
     return points;
   } catch (err) {
     console.warn('[geoService] InfluxDB no disponible, usando datos mock:', err);
